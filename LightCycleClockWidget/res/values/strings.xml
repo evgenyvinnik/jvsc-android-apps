@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Light Cycle Clock</string>
+    <string name="click_intent">ca.jvsh.lightcycle.click</string>
+    <string name="timeformat">Time Format</string>
+    <string name="monthdayyear">Month-Day-Year</string>
+    <string name="daymonthyear">Day-Month-Year</string>
+    <string name="hourminutesecond">Hours-Minutes-Seconds</string>
+    <string name="lasercolortext">Choose the light cycle color</string>
+    <string name="colorpicker">Color Picker</string>
+    <string name="lasercovercheckbox">Draw laser cover</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+</resources>

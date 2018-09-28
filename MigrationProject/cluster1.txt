@@ -1,0 +1,456 @@
+<AS id="cluster1" routing="Cluster">
+			<router id="router1" />
+
+			<storage_type id="crucial" model="SSD" content="storage_content.txt"
+				size="500">
+				<prop id="Bwrite" value="300000" />
+				<prop id="Bread" value="300000" />
+				<prop id="Bconnection" value="300000" />
+			</storage_type>
+
+			<storage_type id="ram" model="RAM" content="memory_content.txt"
+				size="500">
+				<prop id="Bwrite" value="30000000" />
+				<prop id="Bread" value="30000000" />
+				<prop id="Bconnection" value="30000000" />
+			</storage_type>
+
+			<storage id="Disk1" typeId="crucial" />
+			<storage id="Disk2" typeId="crucial" />
+			<storage id="Disk3" typeId="crucial" />
+			<storage id="Disk4" typeId="crucial" />
+			<storage id="Disk5" typeId="crucial" />
+			<storage id="Disk6" typeId="crucial" />
+			<storage id="Disk7" typeId="crucial" />
+			<storage id="Disk8" typeId="crucial" />
+			<storage id="Disk9" typeId="crucial" />
+			<storage id="Disk10" typeId="crucial" />
+			<storage id="Disk11" typeId="crucial" />
+			<storage id="Disk12" typeId="crucial" />
+			<storage id="Disk13" typeId="crucial" />
+			<storage id="Disk14" typeId="crucial" />
+			<storage id="Disk15" typeId="crucial" />
+			<storage id="Disk16" typeId="crucial" />
+			<storage id="Disk17" typeId="crucial" />
+			<storage id="Disk18" typeId="crucial" />
+			<storage id="Disk19" typeId="crucial" />
+			<storage id="Disk20" typeId="crucial" />
+			<storage id="Disk21" typeId="crucial" />
+			<storage id="Disk22" typeId="crucial" />
+			<storage id="Disk23" typeId="crucial" />
+			<storage id="Disk24" typeId="crucial" />
+			<storage id="Disk25" typeId="crucial" />
+			<storage id="Disk26" typeId="crucial" />
+			<storage id="Disk27" typeId="crucial" />
+			<storage id="Disk28" typeId="crucial" />
+			<storage id="Disk29" typeId="crucial" />
+			<storage id="Disk30" typeId="crucial" />
+			<storage id="Disk31" typeId="crucial" />
+			<storage id="Disk32" typeId="crucial" />
+			<storage id="Disk33" typeId="crucial" />
+			<storage id="Disk34" typeId="crucial" />
+			<storage id="Disk35" typeId="crucial" />
+			<storage id="Disk36" typeId="crucial" />
+			<storage id="Disk37" typeId="crucial" />
+			<storage id="Disk38" typeId="crucial" />
+			<storage id="Disk39" typeId="crucial" />
+			<storage id="Disk40" typeId="crucial" />
+			<storage id="Disk41" typeId="crucial" />
+			<storage id="Disk42" typeId="crucial" />
+			<storage id="Disk43" typeId="crucial" />
+			<storage id="Disk44" typeId="crucial" />
+			<storage id="Disk45" typeId="crucial" />
+			<storage id="Disk46" typeId="crucial" />
+			<storage id="Disk47" typeId="crucial" />
+			<storage id="Disk48" typeId="crucial" />
+			<storage id="Disk49" typeId="crucial" />
+			<storage id="Disk50" typeId="crucial" />
+
+
+			<storage id="Ram1" typeId="ram" />
+			<storage id="Ram2" typeId="ram" />
+			<storage id="Ram3" typeId="ram" />
+			<storage id="Ram4" typeId="ram" />
+			<storage id="Ram5" typeId="ram" />
+			<storage id="Ram6" typeId="ram" />
+			<storage id="Ram7" typeId="ram" />
+			<storage id="Ram8" typeId="ram" />
+			<storage id="Ram9" typeId="ram" />
+			<storage id="Ram10" typeId="ram" />
+			<storage id="Ram11" typeId="ram" />
+			<storage id="Ram12" typeId="ram" />
+			<storage id="Ram13" typeId="ram" />
+			<storage id="Ram14" typeId="ram" />
+			<storage id="Ram15" typeId="ram" />
+			<storage id="Ram16" typeId="ram" />
+			<storage id="Ram17" typeId="ram" />
+			<storage id="Ram18" typeId="ram" />
+			<storage id="Ram19" typeId="ram" />
+			<storage id="Ram20" typeId="ram" />
+			<storage id="Ram21" typeId="ram" />
+			<storage id="Ram22" typeId="ram" />
+			<storage id="Ram23" typeId="ram" />
+			<storage id="Ram24" typeId="ram" />
+			<storage id="Ram25" typeId="ram" />
+			<storage id="Ram26" typeId="ram" />
+			<storage id="Ram27" typeId="ram" />
+			<storage id="Ram28" typeId="ram" />
+			<storage id="Ram29" typeId="ram" />
+			<storage id="Ram30" typeId="ram" />
+			<storage id="Ram31" typeId="ram" />
+			<storage id="Ram32" typeId="ram" />
+			<storage id="Ram33" typeId="ram" />
+			<storage id="Ram34" typeId="ram" />
+			<storage id="Ram35" typeId="ram" />
+			<storage id="Ram36" typeId="ram" />
+			<storage id="Ram37" typeId="ram" />
+			<storage id="Ram38" typeId="ram" />
+			<storage id="Ram39" typeId="ram" />
+			<storage id="Ram40" typeId="ram" />
+			<storage id="Ram41" typeId="ram" />
+			<storage id="Ram42" typeId="ram" />
+			<storage id="Ram43" typeId="ram" />
+			<storage id="Ram44" typeId="ram" />
+			<storage id="Ram45" typeId="ram" />
+			<storage id="Ram46" typeId="ram" />
+			<storage id="Ram47" typeId="ram" />
+			<storage id="Ram48" typeId="ram" />
+			<storage id="Ram49" typeId="ram" />
+			<storage id="Ram50" typeId="ram" />
+
+			<host id="host10" power="1000000000">
+				<mount id="Disk10" name="/home" />
+				<mount id="Ram10" name="/slot" />
+			</host>
+			<link id="l10" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host10" up="l10_UP" down="l10_DOWN" />
+			<!--11-20 -->
+
+			<host id="host11" power="1000000000">
+				<mount id="Disk11" name="/home" />
+				<mount id="Ram11" name="/slot" />
+			</host>
+			<link id="l11" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host11" up="l11_UP" down="l11_DOWN" />
+
+			<host id="host12" power="1000000000">
+				<mount id="Disk12" name="/home" />
+				<mount id="Ram12" name="/slot" />
+			</host>
+			<link id="l12" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host12" up="l12_UP" down="l12_DOWN" />
+
+			<host id="host13" power="1000000000">
+				<mount id="Disk13" name="/home" />
+				<mount id="Ram13" name="/slot" />
+			</host>
+			<link id="l13" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host13" up="l13_UP" down="l13_DOWN" />
+
+			<host id="host14" power="1000000000">
+				<mount id="Disk14" name="/home" />
+				<mount id="Ram14" name="/slot" />
+			</host>
+			<link id="l14" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host14" up="l14_UP" down="l14_DOWN" />
+
+			<host id="host15" power="1000000000">
+				<mount id="Disk15" name="/home" />
+				<mount id="Ram15" name="/slot" />
+			</host>
+			<link id="l15" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host15" up="l15_UP" down="l15_DOWN" />
+
+			<host id="host16" power="1000000000">
+				<mount id="Disk16" name="/home" />
+				<mount id="Ram16" name="/slot" />
+			</host>
+			<link id="l16" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host16" up="l16_UP" down="l16_DOWN" />
+
+			<host id="host17" power="1000000000">
+				<mount id="Disk17" name="/home" />
+				<mount id="Ram17" name="/slot" />
+			</host>
+			<link id="l17" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host17" up="l17_UP" down="l17_DOWN" />
+
+			<host id="host18" power="1000000000">
+				<mount id="Disk18" name="/home" />
+				<mount id="Ram18" name="/slot" />
+			</host>
+			<link id="l18" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host18" up="l18_UP" down="l18_DOWN" />
+
+			<host id="host19" power="1000000000">
+				<mount id="Disk19" name="/home" />
+				<mount id="Ram19" name="/slot" />
+			</host>
+			<link id="l19" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host19" up="l19_UP" down="l19_DOWN" />
+
+			<host id="host20" power="1000000000">
+				<mount id="Disk20" name="/home" />
+				<mount id="Ram20" name="/slot" />
+			</host>
+			<link id="l20" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host20" up="l20_UP" down="l20_DOWN" />
+
+			<!--21-30 -->
+			<host id="host21" power="1000000000">
+				<mount id="Disk21" name="/home" />
+				<mount id="Ram21" name="/slot" />
+			</host>
+			<link id="l21" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host21" up="l21_UP" down="l21_DOWN" />
+
+			<host id="host22" power="1000000000">
+				<mount id="Disk22" name="/home" />
+				<mount id="Ram22" name="/slot" />
+			</host>
+			<link id="l22" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host22" up="l22_UP" down="l22_DOWN" />
+
+			<host id="host23" power="1000000000">
+				<mount id="Disk23" name="/home" />
+				<mount id="Ram23" name="/slot" />
+			</host>
+			<link id="l23" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host23" up="l23_UP" down="l23_DOWN" />
+
+			<host id="host24" power="1000000000">
+				<mount id="Disk24" name="/home" />
+				<mount id="Ram24" name="/slot" />
+			</host>
+			<link id="l24" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host24" up="l24_UP" down="l24_DOWN" />
+
+			<host id="host25" power="1000000000">
+				<mount id="Disk25" name="/home" />
+				<mount id="Ram25" name="/slot" />
+			</host>
+			<link id="l25" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host25" up="l25_UP" down="l25_DOWN" />
+
+			<host id="host26" power="1000000000">
+				<mount id="Disk26" name="/home" />
+				<mount id="Ram26" name="/slot" />
+			</host>
+			<link id="l26" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host26" up="l26_UP" down="l26_DOWN" />
+
+			<host id="host27" power="1000000000">
+				<mount id="Disk27" name="/home" />
+				<mount id="Ram27" name="/slot" />
+			</host>
+			<link id="l27" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host27" up="l27_UP" down="l27_DOWN" />
+
+			<host id="host28" power="1000000000">
+				<mount id="Disk28" name="/home" />
+				<mount id="Ram28" name="/slot" />
+			</host>
+			<link id="l28" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host28" up="l28_UP" down="l28_DOWN" />
+
+			<host id="host29" power="1000000000">
+				<mount id="Disk29" name="/home" />
+				<mount id="Ram29" name="/slot" />
+			</host>
+			<link id="l29" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host29" up="l29_UP" down="l29_DOWN" />
+
+			<host id="host30" power="1000000000">
+				<mount id="Disk30" name="/home" />
+				<mount id="Ram30" name="/slot" />
+			</host>
+			<link id="l30" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host30" up="l30_UP" down="l30_DOWN" />
+
+			<!--31-40 -->
+			<host id="host31" power="1000000000">
+				<mount id="Disk31" name="/home" />
+				<mount id="Ram31" name="/slot" />
+			</host>
+			<link id="l31" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host31" up="l31_UP" down="l31_DOWN" />
+
+			<host id="host32" power="1000000000">
+				<mount id="Disk32" name="/home" />
+				<mount id="Ram32" name="/slot" />
+			</host>
+			<link id="l32" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host32" up="l32_UP" down="l32_DOWN" />
+
+			<host id="host33" power="1000000000">
+				<mount id="Disk33" name="/home" />
+				<mount id="Ram33" name="/slot" />
+			</host>
+			<link id="l33" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host33" up="l33_UP" down="l33_DOWN" />
+
+			<host id="host34" power="1000000000">
+				<mount id="Disk34" name="/home" />
+				<mount id="Ram34" name="/slot" />
+			</host>
+			<link id="l34" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host34" up="l34_UP" down="l34_DOWN" />
+
+			<host id="host35" power="1000000000">
+				<mount id="Disk35" name="/home" />
+				<mount id="Ram35" name="/slot" />
+			</host>
+			<link id="l35" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host35" up="l35_UP" down="l35_DOWN" />
+
+			<host id="host36" power="1000000000">
+				<mount id="Disk36" name="/home" />
+				<mount id="Ram36" name="/slot" />
+			</host>
+			<link id="l36" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host36" up="l36_UP" down="l36_DOWN" />
+
+			<host id="host37" power="1000000000">
+				<mount id="Disk37" name="/home" />
+				<mount id="Ram37" name="/slot" />
+			</host>
+			<link id="l37" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host37" up="l37_UP" down="l37_DOWN" />
+
+			<host id="host38" power="1000000000">
+				<mount id="Disk38" name="/home" />
+				<mount id="Ram38" name="/slot" />
+			</host>
+			<link id="l38" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host38" up="l38_UP" down="l38_DOWN" />
+
+			<host id="host39" power="1000000000">
+				<mount id="Disk39" name="/home" />
+				<mount id="Ram39" name="/slot" />
+			</host>
+			<link id="l39" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host39" up="l39_UP" down="l39_DOWN" />
+
+			<host id="host40" power="1000000000">
+				<mount id="Disk40" name="/home" />
+				<mount id="Ram40" name="/slot" />
+			</host>
+			<link id="l40" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host40" up="l40_UP" down="l40_DOWN" />
+
+
+			<!--41-50 -->
+			<host id="host41" power="1000000000">
+				<mount id="Disk41" name="/home" />
+				<mount id="Ram41" name="/slot" />
+			</host>
+			<link id="l41" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host41" up="l41_UP" down="l41_DOWN" />
+
+			<host id="host42" power="1000000000">
+				<mount id="Disk42" name="/home" />
+				<mount id="Ram42" name="/slot" />
+			</host>
+			<link id="l42" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host42" up="l42_UP" down="l42_DOWN" />
+
+			<host id="host43" power="1000000000">
+				<mount id="Disk43" name="/home" />
+				<mount id="Ram43" name="/slot" />
+			</host>
+			<link id="l43" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host43" up="l43_UP" down="l43_DOWN" />
+
+			<host id="host44" power="1000000000">
+				<mount id="Disk44" name="/home" />
+				<mount id="Ram44" name="/slot" />
+			</host>
+			<link id="l44" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host44" up="l44_UP" down="l44_DOWN" />
+
+			<host id="host45" power="1000000000">
+				<mount id="Disk45" name="/home" />
+				<mount id="Ram45" name="/slot" />
+			</host>
+			<link id="l45" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host45" up="l45_UP" down="l45_DOWN" />
+
+			<host id="host46" power="1000000000">
+				<mount id="Disk46" name="/home" />
+				<mount id="Ram46" name="/slot" />
+			</host>
+			<link id="l46" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host46" up="l46_UP" down="l46_DOWN" />
+
+			<host id="host47" power="1000000000">
+				<mount id="Disk47" name="/home" />
+				<mount id="Ram47" name="/slot" />
+			</host>
+			<link id="l47" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host47" up="l47_UP" down="l47_DOWN" />
+
+			<host id="host48" power="1000000000">
+				<mount id="Disk48" name="/home" />
+				<mount id="Ram48" name="/slot" />
+			</host>
+			<link id="l48" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host48" up="l48_UP" down="l48_DOWN" />
+
+			<host id="host49" power="1000000000">
+				<mount id="Disk49" name="/home" />
+				<mount id="Ram49" name="/slot" />
+			</host>
+			<link id="l49" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host49" up="l49_UP" down="l49_DOWN" />
+
+			<host id="host50" power="1000000000">
+				<mount id="Disk50" name="/home" />
+				<mount id="Ram50" name="/slot" />
+			</host>
+			<link id="l50" bandwidth="125000000" latency="0.000100"
+				sharing_policy="FULLDUPLEX" />
+			<host_link id="host50" up="l50_UP" down="l50_DOWN" />
+
+			<backbone id="backbone1" bandwidth="2250000000" latency="5E-4" />
+		</AS>
+

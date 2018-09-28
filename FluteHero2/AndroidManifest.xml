@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ca.jvsh.flute"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="13" />
+
+    <!-- Permission configuration required by Blow Level meter -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Permission configuration required by AdMob -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Permission configuration required by Scoreloop -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Permissions for Fortumo SMS billing -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <!-- Permissions for Android Market In-App billing -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:name=".activity.FluteHeroApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait" >
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" >
+                </category>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.FluteHeroActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HelpActivity"
+            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout"
+            android:label="@string/help_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.PreferencesActivity"
+            android:label="@string/prefs_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other activities -->
+        <activity
+            android:name=".activity.GameLevelsActivity"
+            android:label="@string/activity_game_levels"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.GameActivity"
+            android:label="@string/activity_game"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         <!-- Flutes editor -->
+        <activity
+            android:name=".activity.FlutesActivity"
+            android:label="@string/activity_flutes"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.FluteConstructorActivity"
+            android:label="@string/activity_flute_constructor"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.FluteDesignerActivity"
+            android:label="@string/activity_flute_designer"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Effects editor -->
+        <activity
+            android:name=".activity.EffectsActivity"
+            android:label="@string/activity_effects"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.EffectsEditorActivity"
+            android:label="@string/activity_effects_editor"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Ads -->
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <!-- Scoreloop activities -->
+        <activity
+            android:name=".scoreloop.ScoreloopActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--
+             for convenience we'll disable orientation changes, that saves us from 
+			a lot of hassle dealing with dialoges.
+        -->
+        <activity
+            android:name=".scoreloop.LeaderboardActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".scoreloop.ProfileActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".scoreloop.GamePlayActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".scoreloop.FriendsActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".scoreloop.ChallengesActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".scoreloop.UserActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".scoreloop.AchievementsActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".scoreloop.BuyCoinsActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.scoreloop.client.android.core.ui.ProxyActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden" />
+
+        <!-- Payment Providers. -->
+        <activity
+            android:name="com.paypal.android.MEP.PayPalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.fortumo.android.FortumoActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service android:name="com.scoreloop.client.android.core.paymentprovider.googlemarket.BillingService" />
+
+        <receiver android:name="com.scoreloop.client.android.core.paymentprovider.googlemarket.BillingReceiver" >
+            <intent-filter>
+                <action android:name="com.android.vending.billing.IN_APP_NOTIFY" />
+                <action android:name="com.android.vending.billing.RESPONSE_CODE" />
+                <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

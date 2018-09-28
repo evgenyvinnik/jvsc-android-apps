@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/enemy_fleet_settings"
+	android:key="enemy_fleet_wallpaper_settings">
+
+	<ListPreference
+		android:key="movement_speed"
+		android:defaultValue="slow"
+		android:title="@string/movement_speed_title"
+		android:summary="@string/movement_speed_summary"
+		android:entries="@array/movement_speed_entries"
+		android:entryValues="@array/movement_speed_entry_values"/>
+
+	<CheckBoxPreference
+		android:key="homescreen_change"
+		android:defaultValue="true"
+		android:summary="@string/homescreen_change_summary"
+		android:title="@string/homescreen_change_title"
+		android:summaryOn="@string/homescreen_change_summary_on"
+		android:summaryOff="@string/homescreen_change_summary_off"/>
+
+</PreferenceScreen>

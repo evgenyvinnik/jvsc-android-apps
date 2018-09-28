@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5FE0B6E2-E36C-4D7F-9940-FFA7514974A5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Musagi</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioStream.h" />
+    <ClInclude Include="DPInput.h" />
+    <ClInclude Include="dui.h" />
+    <ClInclude Include="fileselector.h" />
+    <ClInclude Include="gear_effect.h" />
+    <ClInclude Include="gear_instrument.h" />
+    <ClInclude Include="gef_gapan.h" />
+    <ClInclude Include="gfx.h" />
+    <ClInclude Include="gin_chip.h" />
+    <ClInclude Include="gin_midinst.h" />
+    <ClInclude Include="gin_midperc.h" />
+    <ClInclude Include="gin_operator.h" />
+    <ClInclude Include="gin_protobass.h" />
+    <ClInclude Include="gin_swave.h" />
+    <ClInclude Include="gin_vsmp.h" />
+    <ClInclude Include="gin_vsti.h" />
+    <ClInclude Include="gin_wavein.h" />
+    <ClInclude Include="gin_xnes.h" />
+    <ClInclude Include="glkit.h" />
+    <ClInclude Include="glkit_global.h" />
+    <ClInclude Include="hsv.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="main_fileops.h" />
+    <ClInclude Include="midi_io.h" />
+    <ClInclude Include="musagi.h" />
+    <ClInclude Include="musagig.h" />
+    <ClInclude Include="part.h" />
+    <ClInclude Include="pa_callback.h" />
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="playmu\AudioStream.h" />
+    <ClInclude Include="playmu\gear_effect.h" />
+    <ClInclude Include="playmu\gear_instrument.h" />
+    <ClInclude Include="playmu\gef_gapan.h" />
+    <ClInclude Include="playmu\gin_chip.h" />
+    <ClInclude Include="playmu\gin_operator.h" />
+    <ClInclude Include="playmu\gin_protobass.h" />
+    <ClInclude Include="playmu\gin_swave.h" />
+    <ClInclude Include="playmu\gin_vsampler.h" />
+    <ClInclude Include="playmu\gin_vsmp.h" />
+    <ClInclude Include="playmu\gin_xnes.h" />
+    <ClInclude Include="playmu\Log.h" />
+    <ClInclude Include="playmu\main_fileops.h" />
+    <ClInclude Include="playmu\musagi.h" />
+    <ClInclude Include="playmu\musagig.h" />
+    <ClInclude Include="playmu\part.h" />
+    <ClInclude Include="playmu\part_song_cpp.h" />
+    <ClInclude Include="playmu\pa_callback.h" />
+    <ClInclude Include="playmu\playmu.h" />
+    <ClInclude Include="playmu\playmu_sound.h" />
+    <ClInclude Include="playmu\song.h" />
+    <ClInclude Include="song.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DPInput.cpp" />
+    <ClCompile Include="fftsg.cpp" />
+    <ClCompile Include="fileselector.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="part.cpp" />
+    <ClCompile Include="playmu\fftsg.cpp" />
+    <ClCompile Include="playmu\Log.cpp" />
+    <ClCompile Include="playmu\playmu.cpp" />
+    <ClCompile Include="playmu\test.cpp" />
+    <ClCompile Include="song.cpp" />
+    <ClCompile Include="Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="playmu\porting-playmu.txt" />
+    <None Include="porting-musagi.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

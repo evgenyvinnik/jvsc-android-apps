@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ca.jvsh.chem"
+    android:versionCode="2"
+    android:versionName="2" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".ChemClockWidgetApp"
+        android:debuggable="false"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <receiver android:name=".ChemClockWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/clockclockwidgetprovider" />
+        </receiver>
+
+        <service android:name="ca.jvsh.chem.ClockService" />
+    </application>
+
+</manifest>

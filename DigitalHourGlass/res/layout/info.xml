@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<TextView android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:text="Thank you for installing the Digital Hourglass Widget.\n\nPlease read these important instructions.\n\nThis is a widget, not a regular application. Unlike regular applications, widgets are placed on the home screen and offer useful (hopefully) information at a glance. In many cases, such as with this widget, you can press the widget and view additional, or more detailed, information. Pressing this widget will open the Alarm Clock application.\n" />
+</LinearLayout>

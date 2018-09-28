@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">SvmToy</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_svm_toy">Svm Toy</string>
+    <string name="button_change">Change</string>
+    <string name="button_run">Run</string>
+    <string name="button_clear">Clear</string>
+
+</resources>

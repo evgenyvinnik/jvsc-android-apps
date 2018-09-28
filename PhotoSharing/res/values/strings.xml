@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- app name -->
+    <string name="app_name">Photo Sharing App</string>
+
+    <!-- Tab Names -->
+    <string name="peering_settings_tab">Peering Settings</string>
+    <string name="photo_sharing_tab">Photo Sharing</string>
+
+    <!-- Main tab -->
+   
+    <string name="socket_closed">Sockets are Closed</string>
+    <string name="socket_opened">Sockets are Opened</string>
+    <string name="default_tcp_socket_port">9325</string>
+    <string name="default_udp_socket_port">19325</string>
+    <string name="open_socket_tcp_port">Open TCP socket on port</string>
+    <!--<string name="open_socket_udp_port">Open UDP socket on port</string>
+    <string name="server_ip">Server IP</string>
+    <string name="server_tport">Server Port</string>
+    <string name="bytes_received">Bytes received </string>
+    <string name="string_zero">0</string>
+    <string name="bytes_sent">Bytes sent</string>
+    <string name="zero_bytes_counter">Zero bytes counter</string>-->
+
+
+    <!-- Editor tab -->
+    <string name="open_file">Open</string>
+    <string name="configuration_file_path">File path</string>
+    <string name="button_send_file">Send file</string>
+    
+    <!-- Protocol names -->
+    <string name="tcp_only_string">TCP Only</string>
+    <string name="udp_tcp_string">UDP + TCP</string>
+    <string name="enter_peer_ip">Enter Peer IP</string>
+    <string name="enter_peer_port">Enter Peer Port</string>
+    <string name="add_peer">Add Peer</string>   
+    
+    <!-- Menu -->
+    <string name="peer_add">Add Peer</string>   
+    <string name="peer_remove">Remove Peer</string>   
+</resources>

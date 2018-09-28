@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ca.jvsh.reflectius"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <application
+        android:icon="@drawable/icon24"
+        android:label="@string/widget_name"
+        android:name=".ReflectiusApp">
+        
+       <!-- Broadcast Receiver that will process AppWidget updates -->
+        <receiver
+        android:icon="@drawable/icon24"
+        android:label="@string/widget_name"
+           android:name=".ClockWidgetReceiver" >
+            <intent-filter >
+                <action android:name="ca.jvsh.intent.action.ACTION_UPDATE_CLOCK" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="ca.jvsh.intent.action.ACTION_USER_CLOCK" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/clock_widget_provider" />
+        </receiver>
+
+        <service android:name=".ClockService" />
+
+        <activity
+            android:label="Configure Reflectius"
+            android:name=".prefs.ClockPrefsUI">
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+        android:icon="@drawable/icon24"
+        android:label="@string/widget_name"
+            android:name="ClockGlobalOptionsUI"
+            android:targetActivity=".prefs.ClockPrefsUI" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:label="About 24 Clock"
+            android:name=".RelfectiusActivity"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+        
+</manifest>

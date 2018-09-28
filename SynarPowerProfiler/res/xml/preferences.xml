@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/accelerometer_settings_title" >
+        <ListPreference
+            android:defaultValue="run_in_background"
+            android:dialogTitle="@string/operation_level_setting_title"
+            android:entries="@array/operation_level_preference"
+            android:entryValues="@array/operation_level_preference_values"
+            android:key="operation_level"
+            android:summary="@string/operation_level_setting_details"
+            android:title="@string/operation_level_setting" />
+
+        <ca.jvsh.synarprofiler.utils.EditMeasurementPreference
+            android:defaultValue="1000"
+            android:dialogTitle="@string/sampling_period_setting_title"
+            android:key="sampling_period"
+            android:summary="@string/sampling_period_setting_details"
+            android:title="@string/sampling_period_setting" />
+        
+        <ca.jvsh.synarprofiler.utils.EditMeasurementPreference
+            android:defaultValue="100000"
+            android:dialogTitle="@string/flushing_period_setting_title"
+            android:key="data_flushing_period"
+            android:summary="@string/flushing_period_setting_details"
+            android:title="@string/flushing_period_setting" />
+  
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="battery_power"
+            android:summary="@string/battery_power_description"
+            android:title="@string/battery_power" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

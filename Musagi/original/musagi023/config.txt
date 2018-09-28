@@ -1,0 +1,17 @@
+window: 1358 65216 1920 1058 1
+log: 0
+latency: 100
+mididevice: -1
+doublesize: 1
+tooltips: 1
+scrollfollow: 1
+speaker: 0.49
+metronome: 0.97
+keyboard octave: 1
+midi octave: 0
+C:\Users\evgeny\workspace\Musagi\original\musagi023\songs
+
+
+
+
+

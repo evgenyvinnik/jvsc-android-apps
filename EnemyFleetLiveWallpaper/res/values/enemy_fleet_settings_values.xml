@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- Movement speed -->
+	<string-array name="movement_speed_entries">
+		<item>"Still"</item>
+		<item>"Slow"</item>
+		<item>"Fast"</item>
+	</string-array>
+
+	<string-array name="movement_speed_entry_values">
+		<item>"still"</item>
+		<item>"slow"</item>
+		<item>"fast"</item>
+	</string-array>
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    
+    <!-- Entry names for the sample rate menu. -->
+    <string-array name="prefs_sample_entries">
+        <item>8,000 (4 kHz)</item>
+        <item>16,000 (8 kHz)</item>
+        <item>22,050 (11 kHz)</item>
+        <item>44,100 (22 kHz)</item>
+    </string-array>
+
+    <!-- Values for the sample rate menu. -->
+    <string-array name="prefs_sample_values">
+        <item>8000</item>  
+        <item>16000</item>
+        <item>22050</item>
+        <item>44100</item>
+    </string-array>
+    
+  
+    
+</resources>
+

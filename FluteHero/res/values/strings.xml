@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Flute Hero</string>
+    <string name="menu_prefs">Preferences</string>
+    <string name="menu_help">Help</string>
+
+    <!-- Main Activity Strings -->
+    <string name="button_game_levels">Play!</string>
+    <string name="button_flutes">Flutes Collection</string>
+    <string name="button_effects">Sound Effects</string>
+ 
+    <!-- Activity names -->
+    <string name="activity_game">Enjoy :)</string>
+    <string name="activity_flutes">Instruments editor</string>
+    <string name="activity_flute_designer">Flute designer</string>
+    <string name="activity_effects">Effects manager</string>
+    <string name="activity_effects_editor">Effects editor</string>
+    
+    
+    <!-- Preferences strings. -->
+    <string name="prefs_title">Settings</string>
+    <string name="prefs_cat_audio">Audio Settings</string>
+    <string name="prefs_sample">Sample rate</string>
+    <string name="prefs_sample_summary">Determine the sample rate, and hence frequency range</string>
+    <string name="prefs_sample_title">Sample Rate</string>
+
+
+    <!-- Help strings. -->
+    <string name="help_title">Flute Hero User\'s Manual</string>
+
+    <!-- Content descriptions -->
+    <string name="splash_screen_image">Splash screen Image</string>
+    <string name="left_wing">left wing</string>
+    <string name="flute_hero_logo_description">flute hero logo</string>
+    <string name="right_wing">right wing</string>
+
+
+
+</resources>

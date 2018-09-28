@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:src="@drawable/wing_left" 
+        android:contentDescription="@string/left_wing"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="50"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+
+       <ImageView
+            android:id="@+id/logo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/flute_hero_main" 
+            android:contentDescription="@string/flute_hero_logo_description"/>
+
+        <Button
+            android:id="@+id/button_game"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_game_levels"
+            android:textSize="35sp" 
+             android:gravity="center_horizontal|top"/>
+
+        <Button
+            android:id="@+id/button_flutes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_flutes"
+            android:textSize="25sp" 
+			 android:textColor="#732265"
+             android:gravity="center_horizontal|top"/>
+
+        <Button
+            android:id="@+id/button_effects"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_effects"
+            android:textSize="25sp" 
+			android:textColor="#012E40"
+             android:gravity="center_horizontal|top"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:src="@drawable/wing_right"
+        android:contentDescription="@string/right_wing"/>
+
+</LinearLayout>

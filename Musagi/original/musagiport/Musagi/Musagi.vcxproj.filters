@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="playmu">
+      <UniqueIdentifier>{cdb9e293-f5a7-4f1d-8c3d-7959876a5403}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="playmu\Header Files">
+      <UniqueIdentifier>{709c9660-9d93-4860-9b4d-08b781388326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="playmu\Source Files">
+      <UniqueIdentifier>{27f63987-9580-42e3-bd47-0c8bff099479}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="text files">
+      <UniqueIdentifier>{3612cd74-2402-43a2-bf56-82a3c03a0274}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="playmu\AudioStream.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\gear_effect.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\gear_instrument.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\gef_gapan.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\gin_chip.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\gin_operator.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\gin_protobass.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\gin_swave.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\gin_vsampler.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\gin_vsmp.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\gin_xnes.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\Log.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\part.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\main_fileops.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\musagi.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\musagig.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\pa_callback.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\part_song_cpp.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\playmu.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\playmu_sound.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playmu\song.h">
+      <Filter>playmu\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DPInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fileselector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gear_effect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gear_instrument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gef_gapan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gin_chip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gin_midinst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gin_midperc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gin_operator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gin_protobass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gin_swave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gin_vsmp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gin_vsti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gin_wavein.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gin_xnes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="glkit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="glkit_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hsv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main_fileops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="midi_io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="musagi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="musagig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pa_callback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="part.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="song.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="playmu\fftsg.cpp">
+      <Filter>playmu\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="playmu\Log.cpp">
+      <Filter>playmu\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="playmu\playmu.cpp">
+      <Filter>playmu\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="playmu\test.cpp">
+      <Filter>playmu\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DPInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fftsg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fileselector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="part.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="song.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="playmu\porting-playmu.txt">
+      <Filter>text files</Filter>
+    </None>
+    <None Include="porting-musagi.txt">
+      <Filter>text files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

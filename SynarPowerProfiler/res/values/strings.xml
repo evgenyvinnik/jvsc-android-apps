@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Synar Profiler</string>
+    <string name="notification_subtitle">Service is running</string>
+    <string name="started">Synar Profiler started.</string>
+    <string name="stopped">Synar Profiler stopped.</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="activity_settings">Synar Profiler Settings</string>
+    <string name="accelerometer_settings_title">Profiler Settings</string>
+
+    <!-- Operational level settings -->
+    <string name="operation_level_setting">Operational level</string>
+    <string name="operation_level_setting_details">Some OS versions prevent using sensors when the screen is off; set the level that works for you</string>
+    <string name="operation_level_setting_title">Select operational level</string>
+    <string name="run_in_background">Normal (just try running in background)</string>
+    <string name="keep_screen_on">Screen on (keep screen dim)</string>
+    <string name="wake_up">Aggressive (wake up when I turn screen off)</string>
+
+    <!-- Sampling period settings -->
+    <string name="sampling_period_setting">Sampling Period</string>
+    <string name="sampling_period_setting_details">of profiler</string>
+    <string name="sampling_period_setting_title">Enter sampling period (ms)</string>
+
+    <!-- Data flushing period settings -->
+    <string name="flushing_period_setting">Data Flushing Period</string>
+    <string name="flushing_period_setting_details">of profiler</string>
+    <string name="flushing_period_setting_title">Enter data flushing period (ms)</string>
+    <string name="quit">Quit</string>
+
+    <!-- Battery power -->
+    <string name="battery_power">Battery Power</string>
+    <string name="battery_power_description">Power consumed at the battery.</string>
+
+
+</resources>

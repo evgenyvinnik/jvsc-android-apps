@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ca.jvsh.falldetectionlogger"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="ca.jvsh.falldetectionlogger.FallDetectionActivity"
+            android:label="@string/app_name"
+             android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <service android:name="FallDetectionService"
+             android:process=":remote" 
+            android:permission="android.permission.WAKE_LOCK">
+            <intent-filter>
+                <!-- These are the interfaces supported by the service, which
+                     you can bind to. -->
+                <action android:name="ca.jvsh.falldetectionlogger.IRemoteService" />
+       
+                <!-- This is an action code you can use to select the service
+                     without explicitly supplying the implementation class. -->
+                <action android:name="ca.jvsh.falldetectionlogger.REMOTE_SERVICE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

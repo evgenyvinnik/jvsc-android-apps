@@ -1,0 +1,13 @@
+2011-xx-xx v1.0.1
+----------------------------------------------------------------------------
+- Now uses portaudio v19 (thanks to spctrl and drasish), and ALSA if
+  available. That means you shouldn't need to stop all sound-using apps
+  before launching Musagi anymore.
+- Now saves config.txt and log.txt in $XDG_CONFIG_HOME or ~/.config/musagi.
+
+2010-08-01 v1.0
+----------------------------------------------------------------------------
+- Compiles and runs under Linux.
+- Added double-click handling.
+- Fixed SDL keyboard input (works with non-qwerty keymaps too.)
+- Added GTK requesters to replace Windows requesters.

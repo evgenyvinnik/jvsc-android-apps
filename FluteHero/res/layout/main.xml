@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="93dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/left_wing"
+        android:src="@drawable/wing_left" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="50"
+        android:gravity="top"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:contentDescription="@string/flute_hero_logo_description"
+            android:src="@drawable/flute_hero_main" />
+
+        <Button
+            android:id="@+id/button_game"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:text="@string/button_game_levels"
+             android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/button_flutes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:text="@string/button_flutes"
+            android:textColor="#732265"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button_effects"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|top"
+            android:text="@string/button_effects"
+            android:textColor="#012E40"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="93dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/right_wing"
+        android:src="@drawable/wing_right" />
+
+</LinearLayout>

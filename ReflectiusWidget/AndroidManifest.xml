@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ca.jvsh.reflectius"
+    android:versionCode="1"
+    android:versionName="1" >
+   <uses-sdk android:minSdkVersion="10" />
+    
+    <application
+        android:name=".ReflectiusWidgetApp"
+        android:debuggable="false"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <receiver android:name=".ReflectiusWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/reflectiuswidgetprovider" />
+        </receiver>
+
+        <activity
+            android:name="ReflectiusPreferences"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+    </application>
+
+ 
+</manifest>

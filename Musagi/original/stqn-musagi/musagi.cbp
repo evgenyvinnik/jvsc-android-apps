@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="musagi" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/musagi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/musagi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="GProf">
+				<Option output="bin/GProf/musagi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/GProf" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-pg" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+				</Linker>
+			</Target>
+			<Target title="OProfile">
+				<Option output="bin/OProfile/musagi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/OProfile" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Debug64bit">
+				<Option output="bin/Debug64bit/musagi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug64bit/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-m64" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-march=i686" />
+			<Add option="-Wall" />
+			<Add option="-ansi" />
+			<Add option="`pkg-config --cflags sdl gl glu gtk+-2.0 portaudio-2.0`" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --libs sdl gl glu gtk+-2.0 portaudio-2.0`" />
+		</Linker>
+		<Unit filename="AudioStream.h" />
+		<Unit filename="Config.cpp" />
+		<Unit filename="Config.h" />
+		<Unit filename="DPInput.cpp" />
+		<Unit filename="DPInput.h" />
+		<Unit filename="Log.cpp" />
+		<Unit filename="Log.h" />
+		<Unit filename="NEWS" />
+		<Unit filename="README" />
+		<Unit filename="Texture.cpp" />
+		<Unit filename="Texture.h" />
+		<Unit filename="dui.h" />
+		<Unit filename="fftsg.cpp" />
+		<Unit filename="fileselector.cpp" />
+		<Unit filename="fileselector.h" />
+		<Unit filename="gear_effect.h" />
+		<Unit filename="gear_instrument.h" />
+		<Unit filename="gef_gapan.h" />
+		<Unit filename="gfx.h" />
+		<Unit filename="gin_chip.h" />
+		<Unit filename="gin_midinst.h" />
+		<Unit filename="gin_midperc.h" />
+		<Unit filename="gin_operator.h" />
+		<Unit filename="gin_protobass.h" />
+		<Unit filename="gin_swave.h" />
+		<Unit filename="gin_vsmp.h" />
+		<Unit filename="gin_vsti.h" />
+		<Unit filename="gin_wavein.h" />
+		<Unit filename="gin_xnes.h" />
+		<Unit filename="glkit.h" />
+		<Unit filename="glkit_global.h" />
+		<Unit filename="hsv.h" />
+		<Unit filename="license.txt" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main_fileops.h" />
+		<Unit filename="make_release.sh" />
+		<Unit filename="makefile" />
+		<Unit filename="midi_io.h" />
+		<Unit filename="musagi.h" />
+		<Unit filename="musagig.h" />
+		<Unit filename="pa_callback.h" />
+		<Unit filename="part.cpp" />
+		<Unit filename="part.h" />
+		<Unit filename="platform.cpp" />
+		<Unit filename="platform.h" />
+		<Unit filename="song.cpp" />
+		<Unit filename="song.h" />
+		<Unit filename="timer.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1">
+				<lib name="gl" />
+				<lib name="gtk+-2.0" />
+				<lib name="sdl" />
+			</lib_finder>
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

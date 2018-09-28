@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Andori-on</string>
+    <string name="menu_prefs">Preferences</string>
+    <string name="menu_help">Help</string>
+
+    <!-- Main Activity Strings -->
+    <string name="button_game_levels">Play!</string>
+    <string name="button_flutes">Flutes Collection</string>
+    <string name="button_effects">Sound Effects</string>
+   
+    <!-- Content descriptions -->
+    <string name="splash_screen_image">Splash screen Image</string>
+    <string name="flute_hero_logo_description">flute hero logo</string>
+</resources>

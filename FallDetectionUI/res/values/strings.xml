@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">"Fall Detection UI"</string>
+    <string name="menu_start">Start</string>
+    <string name="menu_stop">Stop</string>
+    <string name="textview_status">"Status: "</string>
+    <string name="textview_max">"Max: "</string>
+    <string name="textview_min">"Min: "</string>
+    <string name="textview_range">"Range: "</string>
+    <string name="textview_average">Average:</string>
+    <string name="textview_frequency">"Frequency: "</string>
+    <string name="textview_current_state">"Current state: "</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="gyroscope">Gyroscope</string>
+    <string name="talkback">Talkback</string>
+    <string name="beep">Beep on fall</string>
+    <string name="no_activity">no activity</string>
+</resources>

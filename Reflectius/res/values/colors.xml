@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="prefs_bg_title">#FF808080</color>
+<color name="prefs_bg_top">#F666</color>
+<color name="prefs_bg_bottom">#FF020202</color>
+</resources>

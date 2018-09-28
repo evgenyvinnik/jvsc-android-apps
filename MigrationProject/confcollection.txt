@@ -1,0 +1,1 @@
+small_mapreduce1.conf

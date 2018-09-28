@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="DefaultLocale">
+        <ignore path="src\com\android\gallery3d1\ui\GLCanvasImpl.java" />
+        <ignore path="src\com\android\gallery3d1\util\GalleryUtils.java" />
+    </issue>
+    <issue id="UseSparseArrays">
+        <ignore path="src\com\android\gallery3d1\data\MediaDetails.java" />
+    </issue>
+</lint>

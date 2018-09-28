@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/peer_add_menu"
+        android:icon="@drawable/add"
+        android:showAsAction="ifRoom"
+        android:title="@string/peer_add"/>
+    <item
+        android:id="@+id/peer_remove_menu"
+        android:icon="@drawable/remove"
+        android:showAsAction="ifRoom"
+        android:title="@string/peer_remove"/>
+
+</menu>

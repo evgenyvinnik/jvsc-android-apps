@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- General -->
+	<skip />
+
+	<!-- Application name -->
+	<string name="app_name">DinPattern Wallpaper Set 1</string>
+
+	<string name="tiled_pattern_settings">Settings</string>
+
+	<!-- Select pattern multiple preferences list -->
+	<string name="selected_patterns_title">Select patterns</string>
+	<string name="selected_patterns_dialog_title">Patterns selection</string>
+	<string name="selected_patterns_summary">Choose which patterns you want to see</string>
+
+	<!-- Movement speed -->
+	<string name="movement_speed_title">Movement speed</string>
+	<string name="movement_speed_summary">Select pattern movement speed</string>
+
+	<!-- Movement direction -->
+	<string name="movement_direction_title">Movement direction</string>
+	<string name="movement_direction_summary">Select pattern movement direction</string>
+
+	<!-- Pattern change frequency -->
+	<string name="change_frequency_title">Pattern change frequency</string>
+	<string name="change_frequency_summary">Select how often you want patterns to change</string>
+
+	<!-- Homescreen change -->
+	<string name="homescreen_change_summary">Home screen change</string>
+	<string name="homescreen_change_title">Choose if you want to change pattern while switching between home screens</string>
+	<string name="homescreen_change_summary_on">Change pattern on home screen switch</string>
+	<string name="homescreen_change_summary_off">Do not change pattern on home screen switch</string>
+
+	<!-- Change order-->
+	<string name="change_order_title">Patterns change order</string>
+	<string name="change_order_summary">Select how you want patterns to change</string>
+</resources>

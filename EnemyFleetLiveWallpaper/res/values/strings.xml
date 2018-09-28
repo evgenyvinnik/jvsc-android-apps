@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- General -->
+	<skip />
+
+
+	<!-- Application name -->
+	<string name="app_name">Enemy Fleet Live Wallpaper</string>
+
+	<string name="enemy_fleet_settings">Settings</string>
+
+	<!-- Movement speed -->
+	<string name="movement_speed_title">Movement speed</string>
+	<string name="movement_speed_summary">Select pattern movement speed</string>
+
+	<!-- Homescreen change -->
+	<string name="homescreen_change_summary">Home screen change</string>
+	<string name="homescreen_change_title">Choose if you want to change pattern while switching between home screens</string>
+	<string name="homescreen_change_summary_on">Change pattern on home screen switch</string>
+	<string name="homescreen_change_summary_off">Do not change pattern on home screen switch</string>
+
+</resources>

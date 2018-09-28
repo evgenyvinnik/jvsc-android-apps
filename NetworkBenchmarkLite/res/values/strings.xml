@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">Lite Network Benchmark</string>
+    <string name="general_info_tab">General Info</string>
+    <string name="server_tab">Server</string>
+    <string name="client_tab">Client 1</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_benchmark">Lite Network Benchmark</string>
+    <string name="socket_closed">Socket Closed</string>
+    <string name="socket_opened">Socket Opened</string>
+    <string name="default_socket_port">6000</string>
+    <string name="open_socket_port">Open socket on port</string>
+    <string name="server_ip">Server IP</string>
+    <string name="server_port">Server Port</string>
+    <string name="configuration_file_path">Configuration file path</string>
+    <string name="open_file">Open</string>
+    <string name="bytes_received">Bytes received </string>
+    <string name="string_zero">0</string>
+    <string name="bytes_sent">Bytes sent</string>
+    <string name="zero_bytes_counter">Zero bytes counter</string>
+    <string name="editor_menu_new">New</string>
+    <string name="editor_menu_edit">Edit</string>
+    <string name="editor_menu_save">Save</string>
+    <string name="editor_menu_help">Help</string>
+    <string name="button_add_new_thread">Add new thread</string>
+    <string name="tcp_string">TCP</string>
+    <string name="udp_string">UDP</string>
+
+</resources>

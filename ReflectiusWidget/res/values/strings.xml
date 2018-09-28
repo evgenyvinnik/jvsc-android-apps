@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Reflectius</string>
+    <string name="click_intent">ca.jvsh.reflectius.click</string>
+      <string name="timeformat">Time Format</string>
+    <string name="monthday">Month and Day</string>
+    <string name="hourminute">Hours and Minutes</string>
+    <string name="minutesecond">Minutes and Seconds</string>
+    <string name="lasercolortext">Choose the laser color</string>
+        <string name="colorpicker">Color Picker</string>
+    
+   <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    
+</resources>

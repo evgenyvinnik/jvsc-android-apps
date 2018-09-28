@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/ubuntu_settings" android:key="ubuntuwallpaper_settings">
+
+	<CheckBoxPreference android:key="ubuntu_movement"
+		android:summary="@string/ubuntu_movement_summary"
+		android:title="@string/ubuntu_movement_title"
+		android:summaryOn="Moving"
+		android:summaryOff="Still">
+	</CheckBoxPreference>
+
+</PreferenceScreen>

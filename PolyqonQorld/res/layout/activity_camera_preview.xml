@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* ======================================================================
+*  Copyright (c) 2014 Qualcomm Technologies, Inc. All Rights Reserved.
+*  QTI Proprietary and Confidential.
+*  =====================================================================
+*
+* @file    activity_camera_preview.xml
+* @brief   Android application manifest file for DeviceInfo API.
+*/
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:gravity="top"
+    tools:context=".CameraPreviewActivity" >
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/vuButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/vu_export" />
+
+    <ImageView
+        android:id="@+id/showPreviewButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/arrButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/arr_export" />
+
+    <ImageView
+        android:id="@+id/yoButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/yo_export" />
+
+</RelativeLayout>

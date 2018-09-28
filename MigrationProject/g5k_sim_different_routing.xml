@@ -1,0 +1,571 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid.dtd">
+
+<platform version="3">
+	<AS id="AS0" routing="Floyd">
+
+		<AS id="cluster1" routing="Dijkstra">
+			<router id="cluster1_router" />
+
+			<storage_type id="cluster1_crucial" model="SSD"
+				content="storage_content.txt" size="500">
+				<prop id="Bwrite" value="314600000" />
+				<prop id="Bread" value="314600000" />
+				<prop id="Bconnection" value="314600000" />
+			</storage_type>
+
+			<storage_type id="cluster1_ram" model="RAM"
+				content="memory_content.txt" size="500">
+				<prop id="Bwrite" value="13421772800" />
+				<prop id="Bread" value="13421772800" />
+				<prop id="Bconnection" value="13421772800" />
+			</storage_type>
+
+			<storage id="cluster1_Disk1" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk2" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk3" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk4" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk5" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk6" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk7" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk8" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk9" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk10" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk11" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk12" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk13" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk14" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk15" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk16" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk17" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk18" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk19" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk20" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk21" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk22" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk23" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk24" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk25" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk26" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk27" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk28" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk29" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk30" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk31" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk32" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk33" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk34" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk35" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk36" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk37" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk38" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk39" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk40" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk41" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk42" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk43" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk44" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk45" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk46" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk47" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk48" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk49" typeId="cluster1_crucial" />
+			<storage id="cluster1_Disk50" typeId="cluster1_crucial" />
+
+
+			<storage id="cluster1_Ram1" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram2" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram3" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram4" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram5" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram6" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram7" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram8" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram9" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram10" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram11" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram12" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram13" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram14" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram15" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram16" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram17" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram18" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram19" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram20" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram21" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram22" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram23" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram24" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram25" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram26" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram27" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram28" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram29" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram30" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram31" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram32" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram33" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram34" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram35" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram36" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram37" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram38" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram39" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram40" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram41" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram42" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram43" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram44" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram45" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram46" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram47" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram48" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram49" typeId="cluster1_ram" />
+			<storage id="cluster1_Ram50" typeId="cluster1_ram" />
+
+			<host id="cluster1_host10" power="121200000000">
+				<mount id="cluster1_Disk10" name="/home" />
+				<mount id="cluster1_Ram10" name="/slot" />
+			</host>
+			<link id="cluster1_l10" bandwidth="305000000" latency="0.000100" />
+			<!--11-20 -->
+
+			<host id="cluster1_host11" power="121200000000">
+				<mount id="cluster1_Disk11" name="/home" />
+				<mount id="cluster1_Ram11" name="/slot" />
+			</host>
+			<link id="cluster1_l11" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host12" power="121200000000">
+				<mount id="cluster1_Disk12" name="/home" />
+				<mount id="cluster1_Ram12" name="/slot" />
+			</host>
+			<link id="cluster1_l12" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host13" power="121200000000">
+				<mount id="cluster1_Disk13" name="/home" />
+				<mount id="cluster1_Ram13" name="/slot" />
+			</host>
+			<link id="cluster1_l13" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host14" power="121200000000">
+				<mount id="cluster1_Disk14" name="/home" />
+				<mount id="cluster1_Ram14" name="/slot" />
+			</host>
+			<link id="cluster1_l14" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host15" power="121200000000">
+				<mount id="cluster1_Disk15" name="/home" />
+				<mount id="cluster1_Ram15" name="/slot" />
+			</host>
+			<link id="cluster1_l15" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host16" power="121200000000">
+				<mount id="cluster1_Disk16" name="/home" />
+				<mount id="cluster1_Ram16" name="/slot" />
+			</host>
+			<link id="cluster1_l16" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host17" power="121200000000">
+				<mount id="cluster1_Disk17" name="/home" />
+				<mount id="cluster1_Ram17" name="/slot" />
+			</host>
+			<link id="cluster1_l17" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host18" power="121200000000">
+				<mount id="cluster1_Disk18" name="/home" />
+				<mount id="cluster1_Ram18" name="/slot" />
+			</host>
+			<link id="cluster1_l18" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host19" power="121200000000">
+				<mount id="cluster1_Disk19" name="/home" />
+				<mount id="cluster1_Ram19" name="/slot" />
+			</host>
+			<link id="cluster1_l19" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host20" power="121200000000">
+				<mount id="cluster1_Disk20" name="/home" />
+				<mount id="cluster1_Ram20" name="/slot" />
+			</host>
+			<link id="cluster1_l20" bandwidth="305000000" latency="0.000100" />
+
+			<!--21-30 -->
+			<host id="cluster1_host21" power="121200000000">
+				<mount id="cluster1_Disk21" name="/home" />
+				<mount id="cluster1_Ram21" name="/slot" />
+			</host>
+			<link id="cluster1_l21" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host22" power="121200000000">
+				<mount id="cluster1_Disk22" name="/home" />
+				<mount id="cluster1_Ram22" name="/slot" />
+			</host>
+			<link id="cluster1_l22" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host23" power="121200000000">
+				<mount id="cluster1_Disk23" name="/home" />
+				<mount id="cluster1_Ram23" name="/slot" />
+			</host>
+			<link id="cluster1_l23" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host24" power="121200000000">
+				<mount id="cluster1_Disk24" name="/home" />
+				<mount id="cluster1_Ram24" name="/slot" />
+			</host>
+			<link id="cluster1_l24" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host25" power="121200000000">
+				<mount id="cluster1_Disk25" name="/home" />
+				<mount id="cluster1_Ram25" name="/slot" />
+			</host>
+			<link id="cluster1_l25" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host26" power="121200000000">
+				<mount id="cluster1_Disk26" name="/home" />
+				<mount id="cluster1_Ram26" name="/slot" />
+			</host>
+			<link id="cluster1_l26" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host27" power="121200000000">
+				<mount id="cluster1_Disk27" name="/home" />
+				<mount id="cluster1_Ram27" name="/slot" />
+			</host>
+			<link id="cluster1_l27" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host28" power="121200000000">
+				<mount id="cluster1_Disk28" name="/home" />
+				<mount id="cluster1_Ram28" name="/slot" />
+			</host>
+			<link id="cluster1_l28" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host29" power="121200000000">
+				<mount id="cluster1_Disk29" name="/home" />
+				<mount id="cluster1_Ram29" name="/slot" />
+			</host>
+			<link id="cluster1_l29" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host30" power="121200000000">
+				<mount id="cluster1_Disk30" name="/home" />
+				<mount id="cluster1_Ram30" name="/slot" />
+			</host>
+			<link id="cluster1_l30" bandwidth="305000000" latency="0.000100" />
+
+			<!--31-40 -->
+			<host id="cluster1_host31" power="121200000000">
+				<mount id="cluster1_Disk31" name="/home" />
+				<mount id="cluster1_Ram31" name="/slot" />
+			</host>
+			<link id="cluster1_l31" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host32" power="121200000000">
+				<mount id="cluster1_Disk32" name="/home" />
+				<mount id="cluster1_Ram32" name="/slot" />
+			</host>
+			<link id="cluster1_l32" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host33" power="121200000000">
+				<mount id="cluster1_Disk33" name="/home" />
+				<mount id="cluster1_Ram33" name="/slot" />
+			</host>
+			<link id="cluster1_l33" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host34" power="121200000000">
+				<mount id="cluster1_Disk34" name="/home" />
+				<mount id="cluster1_Ram34" name="/slot" />
+			</host>
+			<link id="cluster1_l34" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host35" power="121200000000">
+				<mount id="cluster1_Disk35" name="/home" />
+				<mount id="cluster1_Ram35" name="/slot" />
+			</host>
+			<link id="cluster1_l35" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host36" power="121200000000">
+				<mount id="cluster1_Disk36" name="/home" />
+				<mount id="cluster1_Ram36" name="/slot" />
+			</host>
+			<link id="cluster1_l36" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host37" power="121200000000">
+				<mount id="cluster1_Disk37" name="/home" />
+				<mount id="cluster1_Ram37" name="/slot" />
+			</host>
+			<link id="cluster1_l37" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host38" power="121200000000">
+				<mount id="cluster1_Disk38" name="/home" />
+				<mount id="cluster1_Ram38" name="/slot" />
+			</host>
+			<link id="cluster1_l38" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host39" power="121200000000">
+				<mount id="cluster1_Disk39" name="/home" />
+				<mount id="cluster1_Ram39" name="/slot" />
+			</host>
+			<link id="cluster1_l39" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host40" power="121200000000">
+				<mount id="cluster1_Disk40" name="/home" />
+				<mount id="cluster1_Ram40" name="/slot" />
+			</host>
+			<link id="cluster1_l40" bandwidth="305000000" latency="0.000100" />
+
+
+			<!--41-50 -->
+			<host id="cluster1_host41" power="121200000000">
+				<mount id="cluster1_Disk41" name="/home" />
+				<mount id="cluster1_Ram41" name="/slot" />
+			</host>
+			<link id="cluster1_l41" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host42" power="121200000000">
+				<mount id="cluster1_Disk42" name="/home" />
+				<mount id="cluster1_Ram42" name="/slot" />
+			</host>
+			<link id="cluster1_l42" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host43" power="121200000000">
+				<mount id="cluster1_Disk43" name="/home" />
+				<mount id="cluster1_Ram43" name="/slot" />
+			</host>
+			<link id="cluster1_l43" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host44" power="121200000000">
+				<mount id="cluster1_Disk44" name="/home" />
+				<mount id="cluster1_Ram44" name="/slot" />
+			</host>
+			<link id="cluster1_l44" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host45" power="121200000000">
+				<mount id="cluster1_Disk45" name="/home" />
+				<mount id="cluster1_Ram45" name="/slot" />
+			</host>
+			<link id="cluster1_l45" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host46" power="121200000000">
+				<mount id="cluster1_Disk46" name="/home" />
+				<mount id="cluster1_Ram46" name="/slot" />
+			</host>
+			<link id="cluster1_l46" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host47" power="121200000000">
+				<mount id="cluster1_Disk47" name="/home" />
+				<mount id="cluster1_Ram47" name="/slot" />
+			</host>
+			<link id="cluster1_l47" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host48" power="121200000000">
+				<mount id="cluster1_Disk48" name="/home" />
+				<mount id="cluster1_Ram48" name="/slot" />
+			</host>
+			<link id="cluster1_l48" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host49" power="121200000000">
+				<mount id="cluster1_Disk49" name="/home" />
+				<mount id="cluster1_Ram49" name="/slot" />
+			</host>
+			<link id="cluster1_l49" bandwidth="305000000" latency="0.000100" />
+
+			<host id="cluster1_host50" power="121200000000">
+				<mount id="cluster1_Disk50" name="/home" />
+				<mount id="cluster1_Ram50" name="/slot" />
+			</host>
+			<link id="cluster1_l50" bandwidth="305000000" latency="0.000100" />
+
+			<!-- routes providing topological information -->
+			<route src="cluster1_router" dst="cluster1_host10">
+				<link_ctn id="cluster1_l10" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host11">
+				<link_ctn id="cluster1_l11" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host12">
+				<link_ctn id="cluster1_l12" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host13">
+				<link_ctn id="cluster1_l13" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host14">
+				<link_ctn id="cluster1_l14" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host15">
+				<link_ctn id="cluster1_l15" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host16">
+				<link_ctn id="cluster1_l16" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host17">
+				<link_ctn id="cluster1_l17" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host18">
+				<link_ctn id="cluster1_l18" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host19">
+				<link_ctn id="cluster1_l19" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host20">
+				<link_ctn id="cluster1_l20" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host21">
+				<link_ctn id="cluster1_l21" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host22">
+				<link_ctn id="cluster1_l22" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host23">
+				<link_ctn id="cluster1_l23" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host24">
+				<link_ctn id="cluster1_l24" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host25">
+				<link_ctn id="cluster1_l25" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host26">
+				<link_ctn id="cluster1_l26" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host27">
+				<link_ctn id="cluster1_l27" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host28">
+				<link_ctn id="cluster1_l28" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host29">
+				<link_ctn id="cluster1_l29" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host30">
+				<link_ctn id="cluster1_l30" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host31">
+				<link_ctn id="cluster1_l31" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host32">
+				<link_ctn id="cluster1_l32" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host33">
+				<link_ctn id="cluster1_l33" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host34">
+				<link_ctn id="cluster1_l34" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host35">
+				<link_ctn id="cluster1_l35" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host36">
+				<link_ctn id="cluster1_l36" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host37">
+				<link_ctn id="cluster1_l37" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host38">
+				<link_ctn id="cluster1_l38" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host39">
+				<link_ctn id="cluster1_l39" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host40">
+				<link_ctn id="cluster1_l40" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host41">
+				<link_ctn id="cluster1_l41" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host42">
+				<link_ctn id="cluster1_l42" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host43">
+				<link_ctn id="cluster1_l43" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host44">
+				<link_ctn id="cluster1_l44" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host45">
+				<link_ctn id="cluster1_l45" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host46">
+				<link_ctn id="cluster1_l46" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host47">
+				<link_ctn id="cluster1_l47" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host48">
+				<link_ctn id="cluster1_l48" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host49">
+				<link_ctn id="cluster1_l49" />
+			</route>
+
+			<route src="cluster1_router" dst="cluster1_host50">
+				<link_ctn id="cluster1_l50" />
+			</route>
+
+		</AS>
+
+		<!-- <link id="link1-2" bandwidth="22500000" latency="5E-3" /> <link id="link2-3" 
+			bandwidth="22500000" latency="5E-3" /> <link id="link3-4" bandwidth="22500000" 
+			latency="5E-3" /> <link id="link4-5" bandwidth="22500000" latency="5E-3" 
+			/> <link id="link5-6" bandwidth="22500000" latency="5E-3" /> <link id="link6-7" 
+			bandwidth="22500000" latency="5E-3" /> <link id="link7-8" bandwidth="22500000" 
+			latency="5E-3" /> <link id="link8-9" bandwidth="22500000" latency="5E-3" 
+			/> <link id="link9-1" bandwidth="22500000" latency="5E-3" /> <ASroute src="cluster1" 
+			dst="cluster2" gw_src="cluster1_router" gw_dst="cluster2_router"> <link_ctn 
+			id="link1-2" /> </ASroute> <ASroute src="cluster2" dst="cluster3" gw_src="cluster2_router" 
+			gw_dst="cluster3_router" symmetrical="YES"> <link_ctn id="link2-3" /> </ASroute> 
+			<ASroute src="cluster3" dst="cluster4" gw_src="cluster3_router" gw_dst="cluster4_router" 
+			symmetrical="YES"> <link_ctn id="link3-4" /> </ASroute> <ASroute src="cluster4" 
+			dst="cluster5" gw_src="cluster4_router" gw_dst="cluster5_router" symmetrical="YES"> 
+			<link_ctn id="link4-5" /> </ASroute> <ASroute src="cluster5" dst="cluster6" 
+			gw_src="cluster5_router" gw_dst="cluster6_router" symmetrical="YES"> <link_ctn 
+			id="link5-6" /> </ASroute> <ASroute src="cluster6" dst="cluster7" gw_src="cluster6_router" 
+			gw_dst="cluster7_router" symmetrical="YES"> <link_ctn id="link6-7" /> </ASroute> 
+			<ASroute src="cluster7" dst="cluster8" gw_src="cluster7_router" gw_dst="cluster8_router" 
+			symmetrical="YES"> <link_ctn id="link7-8" /> </ASroute> <ASroute src="cluster8" 
+			dst="cluster9" gw_src="cluster8_router" gw_dst="cluster9_router" symmetrical="YES"> 
+			<link_ctn id="link8-9" /> </ASroute> <ASroute src="cluster9" dst="cluster1" 
+			gw_src="cluster9_router" gw_dst="cluster1_router" symmetrical="YES"> <link_ctn 
+			id="link9-1" /> </ASroute> -->
+
+
+	</AS>
+</platform>

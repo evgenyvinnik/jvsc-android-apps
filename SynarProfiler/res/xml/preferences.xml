@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/accelerometer_settings_title" >
+        <ListPreference
+            android:defaultValue="run_in_background"
+            android:dialogTitle="@string/operation_level_setting_title"
+            android:entries="@array/operation_level_preference"
+            android:entryValues="@array/operation_level_preference_values"
+            android:key="operation_level"
+            android:summary="@string/operation_level_setting_details"
+            android:title="@string/operation_level_setting" />
+
+        <ca.jvsh.synarprofiler.utils.EditMeasurementPreference
+            android:defaultValue="1000"
+            android:dialogTitle="@string/sampling_period_setting_title"
+            android:key="sampling_period"
+            android:summary="@string/sampling_period_setting_details"
+            android:title="@string/sampling_period_setting" />
+        
+        <ca.jvsh.synarprofiler.utils.EditMeasurementPreference
+            android:defaultValue="100000"
+            android:dialogTitle="@string/flushing_period_setting_title"
+            android:key="data_flushing_period"
+            android:summary="@string/flushing_period_setting_details"
+            android:title="@string/flushing_period_setting" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/battery_and_cpus_power" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="battery_and_cpus_power"
+            android:title="@string/track_battery_and_cpus_power" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="battery_and_cpus_power"
+            android:key="battery_power"
+            android:summary="@string/battery_power_description"
+            android:title="@string/battery_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="battery_and_cpus_power"
+            android:key="cpu0_power"
+            android:summary="@string/cpu0_power_description"
+            android:title="@string/cpu0_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="battery_and_cpus_power"
+            android:key="cpu1_power"
+            android:summary="@string/cpu1_power_description"
+            android:title="@string/cpu1_power" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/main_power_sensors" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="main_power_sensors"
+            android:title="@string/track_main_power_sensors" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_power_sensors"
+            android:key="display_elvdd_power"
+            android:summary="@string/display_elvdd_power_desc"
+            android:title="@string/display_elvdd_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_power_sensors"
+            android:key="display_memory_power"
+            android:summary="@string/display_memory_power_desc"
+            android:title="@string/display_memory_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_power_sensors"
+            android:key="haptics_power"
+            android:summary="@string/haptics_power_desc"
+            android:title="@string/haptics_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_power_sensors"
+            android:key="touch_screen_power"
+            android:summary="@string/touch_screen_power_desc"
+            android:title="@string/touch_screen_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_power_sensors"
+            android:key="internal_memory_power"
+            android:summary="@string/internal_memory_power_desc"
+            android:title="@string/internal_memory_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_power_sensors"
+            android:key="vddpx1_lpddr2_power"
+            android:summary="@string/vddpx1_lpddr2_power_desc"
+            android:title="@string/vddpx1_lpddr2_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_power_sensors"
+            android:key="io_pad3_power"
+            android:summary="@string/io_pad3_power_desc"
+            android:title="@string/io_pad3_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_power_sensors"
+            android:key="vreg_l16a_power"
+            android:summary="@string/vreg_l16a_power_desc"
+            android:title="@string/vreg_l16a_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_power_sensors"
+            android:key="dram_vdd2_power"
+            android:summary=""
+            android:title="@string/dram_vdd2_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_power_sensors"
+            android:key="digital_core_power"
+            android:summary="@string/digital_core_power_desc"
+            android:title="@string/digital_core_power" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/secondary_power_sensors" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="secondary_power_sensors"
+            android:title="@string/track_secondary_power_sensors" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="ambient_light_sensor_power"
+            android:summary="@string/ambient_light_sensor_power_desc"
+            android:title="@string/ambient_light_sensor_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="display_io_power"
+            android:summary="@string/display_io_power_desc"
+            android:title="@string/display_io_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="audio_dsp_power"
+            android:summary="@string/audio_dsp_power_desc"
+            android:title="@string/audio_dsp_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="camera_analog_power"
+            android:summary="@string/camera_analog_power_desc"
+            android:title="@string/camera_analog_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="camera_digital_power"
+            android:summary="@string/camera_digital_power_desc"
+            android:title="@string/camera_digital_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="camera_io_power"
+            android:summary="@string/camera_io_power_desc"
+            android:title="@string/camera_io_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="audio_codec_analog_power"
+            android:summary="@string/audio_codec_analog_power_desc"
+            android:title="@string/audio_codec_analog_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="audio_codec_io_power"
+            android:summary=""
+            android:title="@string/audio_codec_io_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="audio_codec_vddcx_1_power"
+            android:summary=""
+            android:title="@string/audio_codec_vddcx_1_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="dram_vdd1_power"
+            android:summary=""
+            android:title="@string/dram_vdd1_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="emmc_power"
+            android:summary="@string/emmc_power_desc"
+            android:title="@string/emmc_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="emmc_host_interface_power"
+            android:summary="@string/emmc_host_interface_power_desc"
+            android:title="@string/emmc_host_interface_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="hdmi_power"
+            android:summary="@string/hdmi_power_desc"
+            android:title="@string/hdmi_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="io_pad2_power"
+            android:summary="@string/io_pad2_power_desc"
+            android:title="@string/io_pad2_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="sd_card_power"
+            android:summary="@string/sd_card_power_desc"
+            android:title="@string/sd_card_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="ism_vdd2_power"
+            android:summary=""
+            android:title="@string/ism_vdd2_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="vreg_l13a_power"
+            android:summary="@string/vreg_l13a_power_desc"
+            android:title="@string/vreg_l13a_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_power_sensors"
+            android:key="vreg_l21a_power"
+            android:summary="@string/vreg_l21a_power_desc"
+            android:title="@string/vreg_l21a_power" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/main_cpu_stats" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="main_cpu_stats"
+            android:title="@string/track_main_cpu_stats" />
+        <!-- CPU0 stats -->
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_cpu_stats"
+            android:key="cpu0_load_user"
+            android:summary="@string/cpu_load_user_desc"
+            android:title="@string/cpu0_load_user" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_cpu_stats"
+            android:key="cpu0_load_system"
+            android:summary="@string/cpu_load_system_desc"
+            android:title="@string/cpu0_load_system" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_cpu_stats"
+            android:key="cpu0_load_idle"
+            android:summary="@string/cpu_load_idle_desc"
+            android:title="@string/cpu0_load_idle" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_cpu_stats"
+            android:key="cpu0_load_iowait"
+            android:summary="@string/cpu_load_iowait_desc"
+            android:title="@string/cpu0_load_iowait" />
+
+        <!-- CPU1 Stats -->
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_cpu_stats"
+            android:key="cpu1_load_user"
+            android:summary="@string/cpu_load_user_desc"
+            android:title="@string/cpu1_load_user" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_cpu_stats"
+            android:key="cpu1_load_system"
+            android:summary="@string/cpu_load_system_desc"
+            android:title="@string/cpu1_load_system" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_cpu_stats"
+            android:key="cpu1_load_idle"
+            android:summary="@string/cpu_load_idle_desc"
+            android:title="@string/cpu1_load_idle" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="main_cpu_stats"
+            android:key="cpu1_load_iowait"
+            android:summary="@string/cpu_load_iowait_desc"
+            android:title="@string/cpu1_load_iowait" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/secondary_cpu_stats" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="secondary_cpu_stats"
+            android:title="@string/track_secondary_cpu_stats" />
+
+        <!-- CPU0 stats -->
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_cpu_stats"
+            android:key="cpu0_load_nice"
+            android:summary="@string/cpu_load_nice_desc"
+            android:title="@string/cpu0_load_nice" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_cpu_stats"
+            android:key="cpu0_frequency"
+            android:summary="@string/cpu_frequency_desc"
+            android:title="@string/cpu0_frequency" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_cpu_stats"
+            android:key="cpu0_online_state"
+            android:summary="@string/cpu_online_state_desc"
+            android:title="@string/cpu0_online_state" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_cpu_stats"
+            android:key="cpu0_interrupts"
+            android:summary="@string/cpu_interrupts_desc"
+            android:title="@string/cpu0_interrupts" />
+
+        <!-- CPU1 Stats -->
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_cpu_stats"
+            android:key="cpu1_load_nice"
+            android:summary="@string/cpu_load_nice_desc"
+            android:title="@string/cpu1_load_nice" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_cpu_stats"
+            android:key="cpu1_frequency"
+            android:summary="@string/cpu_frequency_desc"
+            android:title="@string/cpu1_frequency" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_cpu_stats"
+            android:key="cpu1_online_state"
+            android:summary="@string/cpu_online_state_desc"
+            android:title="@string/cpu1_online_state" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="secondary_cpu_stats"
+            android:key="cpu1_interrupts"
+            android:summary="@string/cpu_interrupts_desc"
+            android:title="@string/cpu1_interrupts" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/network_stats" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="network_stats"
+            android:title="@string/track_network_stats" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="network_stats"
+            android:key="cellular_data_state"
+            android:summary="@string/cellular_data_state_desc"
+            android:title="@string/cellular_data_state" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="network_stats"
+            android:key="wifi_state"
+            android:summary="@string/wifi_state_desc"
+            android:title="@string/wifi_state" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="network_stats"
+            android:key="wifi_rssi"
+            android:summary="@string/wifi_rssi_desc"
+            android:title="@string/wifi_rssi" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/other_stats" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="other_stats"
+            android:title="@string/track_other_stats" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="other_stats"
+            android:key="application_state"
+            android:summary="@string/application_state_desc"
+            android:title="@string/application_state" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="other_stats"
+            android:key="memory_usage"
+            android:summary="@string/memory_usage_desc"
+            android:title="@string/memory_usage" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="other_stats"
+            android:key="screen_state"
+            android:summary="@string/screen_state_desc"
+            android:title="@string/screen_state" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="other_stats"
+            android:key="sleep_state"
+            android:summary="@string/sleep_state_desc"
+            android:title="@string/sleep_state" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="other_stats"
+            android:key="wakelocks"
+            android:summary="@string/wakelocks_pref_desc"
+            android:title="@string/wakelocks_pref" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textViewServerIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/server_ip" />
+
+        <EditText
+            android:id="@+id/editTextServerIp"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textViewServerPort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/server_port" />
+
+        <EditText
+            android:id="@+id/editTextServerPort"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="4"
+            android:text="@string/default_socket_port" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textViewConfigurationFilePath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/configuration_file_path" />
+
+        <EditText
+            android:id="@+id/editTextConfigurationFilePath"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/buttonOpenFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_file" />
+
+    </LinearLayout>
+
+
+          <RadioGroup
+            android:id="@+id/radioGroupClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioClientTcp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/tcp_string" />
+
+            <RadioButton
+                android:id="@+id/radioClientUdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/udp_string" />
+        </RadioGroup>
+
+    
+    <ToggleButton
+        android:id="@+id/toggleButtonClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOff="Start Sending"
+        android:textOn="Stop sending" />
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bytes_sent" />
+
+      <TextView
+            android:id="@+id/textViewBytesSent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_zero" />
+    </LinearLayout>
+</LinearLayout>

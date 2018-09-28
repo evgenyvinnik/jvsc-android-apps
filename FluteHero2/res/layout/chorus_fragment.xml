@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:turnknob="http://schemas.android.com/apk/res/ca.jvsh.flute"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="right"
+    android:orientation="vertical"
+    android:weightSum="258" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="28"
+        android:src="@drawable/chorus_under_r1_c1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:orientation="horizontal"
+        android:weightSum="143" >
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="71" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/chorus_under_r2_c1" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="28.5" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/chorus_under_r2_c4" />
+
+            <ca.jvsh.flute.util.TurnKnob
+                android:id="@+id/clockSlider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                turnknob:arrowAngle="60"
+                turnknob:arrowColor="#000000"
+                turnknob:currentAngle="0"
+                turnknob:currentValue="50"
+                turnknob:endAngle="280"
+                turnknob:endValue="100"
+                turnknob:knobColor="#EDE511"
+                turnknob:knobEdgeColor="#EDE511"
+                turnknob:sliderStateColor="#C7F0E3"
+                turnknob:sliderTickColor="#FFFFFF"
+                turnknob:sliderUndeneathColor="#3E3E47"
+                turnknob:startAngle="130"
+                turnknob:startValue="0"
+                turnknob:textColor="#FFFFFF"
+                turnknob:textFormat="%.0f" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="28" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/chorus_under_r2_c6" />
+
+            <ca.jvsh.flute.util.TurnKnob
+                android:id="@+id/clockSlider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                turnknob:arrowAngle="60"
+                turnknob:arrowColor="#000000"
+                turnknob:currentAngle="0"
+                turnknob:currentValue="50"
+                turnknob:endAngle="280"
+                turnknob:endValue="100"
+                turnknob:knobColor="#EDE511"
+                turnknob:knobEdgeColor="#EDE511"
+                turnknob:sliderStateColor="#C7F0E3"
+                turnknob:sliderTickColor="#FFFFFF"
+                turnknob:sliderUndeneathColor="#3E3E47"
+                turnknob:startAngle="130"
+                turnknob:startValue="0"
+                turnknob:textColor="#FFFFFF"
+                turnknob:textFormat="%.0f" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="16.2" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/chorus_under_r2_c8" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:src="@drawable/chorus_under_r3_c1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="29"
+        android:orientation="horizontal"
+        android:weightSum="145" >
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="15.5" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/chorus_under_r4_c1" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="27.5" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/chorus_under_r4_c2" />
+
+            <ca.jvsh.flute.util.TurnKnob
+                android:id="@+id/clockSlider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                turnknob:arrowAngle="60"
+                turnknob:arrowColor="#000000"
+                turnknob:currentAngle="0"
+                turnknob:currentValue="50"
+                turnknob:endAngle="280"
+                turnknob:endValue="100"
+                turnknob:knobColor="#EDE511"
+                turnknob:knobEdgeColor="#EDE511"
+                turnknob:sliderStateColor="#C7F0E3"
+                turnknob:sliderTickColor="#FFFFFF"
+                turnknob:sliderUndeneathColor="#3E3E47"
+                turnknob:startAngle="130"
+                turnknob:startValue="0"
+                turnknob:textColor="#FFFFFF"
+                turnknob:textFormat="%.0f" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="29.5" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/chorus_under_r4_c3" />
+
+            <ca.jvsh.flute.util.TurnKnob
+                android:id="@+id/clockSlider"
+                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                turnknob:arrowAngle="60"
+                turnknob:arrowColor="#000000"
+                turnknob:currentAngle="0"
+                turnknob:currentValue="50"
+                turnknob:endAngle="280"
+                turnknob:endValue="100"
+                turnknob:knobColor="#EDE511"
+                turnknob:knobEdgeColor="#EDE511"
+                turnknob:sliderStateColor="#C7F0E3"
+                turnknob:sliderTickColor="#FFFFFF"
+                turnknob:sliderUndeneathColor="#3E3E47"
+                turnknob:startAngle="130"
+                turnknob:startValue="0"
+                turnknob:textColor="#FFFFFF"
+                turnknob:textFormat="%.0f" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="14.3" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/chorus_under_r4_c4" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="28.5" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/chorus_under_r4_c5" />
+
+            <ca.jvsh.flute.util.TurnKnob
+                android:id="@+id/clockSlider"
+                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                turnknob:arrowAngle="60"
+                turnknob:arrowColor="#000000"
+                turnknob:currentAngle="0"
+                turnknob:currentValue="50"
+                turnknob:endAngle="280"
+                turnknob:endValue="100"
+                turnknob:knobColor="#EDE511"
+                turnknob:knobEdgeColor="#EDE511"
+                turnknob:sliderStateColor="#C7F0E3"
+                turnknob:sliderTickColor="#FFFFFF"
+                turnknob:sliderUndeneathColor="#3E3E47"
+                turnknob:startAngle="130"
+                turnknob:startValue="0"
+                turnknob:textColor="#FFFFFF"
+                turnknob:textFormat="%.0f" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="30" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/chorus_under_r4_c7" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="250"
+        android:src="@drawable/chorus_under_r5_c1" />
+
+</LinearLayout>

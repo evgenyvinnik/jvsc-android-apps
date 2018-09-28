@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Chemistry Clock</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    
+</resources>

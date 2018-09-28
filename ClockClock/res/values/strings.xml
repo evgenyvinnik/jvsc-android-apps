@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Clock Clock</string>
+    <string name="arrowcolortext">Choose the clock color</string>
+    <string name="colorpicker">Color Picker</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+</resources>

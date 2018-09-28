@@ -1,0 +1,527 @@
+<html>
+
+<head>
+<title>Musagi 0.23 documentation</title>
+</head>
+
+<body bgcolor="#909090" text="#000000" link="#FFFFFF" alink="#FF5050" vlink="#404040" scrolling="yes">
+<center>
+<table width="900" bgcolor="#B0B0B0">
+<tr>
+<td>
+
+<basefont size=2 face="Arial">
+<br>
+
+<font size=4>
+<b>Musagi 0.23 documentation</b>
+<br>
+<br>
+</font>
+This is a guide to most of the functionality in the application.<br>
+If you encounter any bugs or annoying behaviour, please let me know (try <a href="mailto:drpetter@gmail.com">email</a>, or the <a href="http://drpetter.proboards.com/index.cgi?board=musagi">forum</a>).<br>
+You can enable the log file by editing config.txt, this could be useful if you experience crashes.<br>
+<br>
+<br>
+<br>
+
+<font size=4>
+<b>Contents:</b>
+<br>
+<br>
+</font>
+<b>
+<a href="#quickstart">Quick start</a><br>
+<a href="#overview">Overview</a><br>
+<a href="#main">Main interface</a><br>
+<a href="#parts">Parts</a><br>
+<a href="#instruments">Instruments</a><br>
+<font size=2>
+- <a href="#xnes">xnes</a><br>
+- <a href="#chip">chip</a><br>
+- <a href="#vsmp">vsmp</a><br>
+- <a href="#swave">swave</a><br>
+- <a href="#protobass">protobass</a><br>
+- <a href="#midinst">midinst</a><br>
+- <a href="#midperc">midperc</a><br>
+- <a href="#vsti">VSTi</a><br>
+- <a href="#operator">operator</a><br>
+- <a href="#wavein">wavein</a><br>
+</font>
+</b>
+<br>
+<br>
+<b>LMB, MMB, RMB are the left, middle and right mouse buttons.</b><br>
+Clicking the middle mouse button usually means clicking the scroll wheel.<br>
+If you don't have a middle mouse button (or don't like using it) you can use Alt+LMB instead.<br>
+<br>
+<br>
+<br>
+
+<img src="divider.gif"><br><br>
+<font size=4>
+<a name="quickstart"></a>
+<b>Quick start</b>
+<br>
+<br>
+</font>
+Basic things you need to know to play around a bit:<br>
+<br>
+<b>-</b> Play instruments using your keyboard or midi input device. [although midi input is currently disabled due to being broken...]<br>
+<b>-</b> If the sound is crackly or somehow doesn't seem to work right, try closing the program and increase latency in config.txt<br>
+<b>-</b> Select instruments by clicking LMB in the upper-right list (one is present by default, add more using the RMB context menu).<br>
+<b>-</b> Play around with instrument parameters in the window to the right. Double-click instrument names to show or hide their windows.<br>
+<b>-</b> The window to the left is a "part window" where you can record notes either live or by click-dragging LMB (RMB to erase notes).<br>
+<br>
+There are tooltips for all buttons and knobs, just hover over them to get information about what they do. Hold Ctrl to make the tooltips appear instantly.<br>
+<br>
+Try loading an example song and playing it, then have a look at some of the instruments that were loaded with it.<br>
+<br>
+To turn a knob, click LMB on it and move the mouse up and down while holding LMB. Hold Shift while doing this to turn at 1/10th the speed (more precision). Horizontal movement has no effect on the knob.<br>
+<br>
+<img src="dissonance.gif"><br>
+The three lights in the top-left area of the window labeled "dissonance" light up if there are notes playing that don't harmonize well with each other. This is meant as a rough guide for beginners to identify problematic parts of a song, or to help pick out suitable notes when building scales and chords. Naturally, this is a very simple estimate based on a small table of note relations, and there may definitely be pleasant configurations that register as "dissonant". Similarly, just because this indicator doesn't light up won't mean that everything played sounds great... Typically though, if your song doesn't sound very good and these lights come on, you should look into moving notes around until the dissonance is gone. It might get you back on track.<br>
+<br>
+<br>
+<br>
+
+<img src="divider.gif"><br><br>
+<font size=4>
+<a name="overview"></a>
+<b>Overview</b>
+<br>
+<br>
+</font>
+Songs are made up of an arrangement of "parts" which contain a series of note triggers. Each part is bound to a specific instrument which is 
+controlled by these triggers to generate the actual sound.<br>
+<br>
+Apart from normal editing operations like creating/moving/deleting them, parts can also be "cloned" and placed at various places on the timeline. Changing the contents of a cloned part affects all clones (there is really only one part, but the clones make up several views/instances of it)<br>
+Furthermore, parts can have a loop position and loop count. Looped parts are trailed by a corresponding number of ghost images to indicate the full duration. Control the number of loops using up/down buttons in the bottom left corner of the screen.<br>
+<br>
+For most things, there is a context menu brought up by right-clicking. The exception is window titles and some other areas, where right-clicking will instead edit text (part or instrument names).<br>
+<br>
+Musagi uses OpenGL for the graphical interface and Portaudio/DirectSound for audio.<br>
+<br>
+<br>
+<br>
+
+<img src="divider.gif"><br><br>
+<font size=4>
+<a name="main"></a>
+<b>Main interface</b>
+<br>
+<br>
+</font>
+<img src="main1.gif"><br>
+<br>
+Click and drag to move parts around in the timeline. The rows ("tracks") are just there to guide arrangement and structure, they are not "channels" in any way, so don't be afraid of spreading things out. The only real function they have is that they can be muted (see below), which means it's useful to treat them as channels after all ;)<br>
+<br>
+Space+LMB is used for scrolling in the song or part windows.<br>
+<br>
+You can open a context menu by clicking RMB on an empty spot in the timeline. From there it's possible to create new parts or mute/unmute tracks. If you right-click on an existing part, you get options for copying and cloning it, among other things.<br>
+There are also shortcuts for some operations:<br>
+
+Click MMB to create a new part using the currently selected instrument.<br>
+Use Shift+MMB to create a normal non-cloned copy of the currently selected part. This will be a new independent part with its content copied from the old one. While the copy receives a modified name, it's entirely legal to have several unique parts with identical names (it might be confusing though).<br>
+Hold Ctrl while clicking MMB to create a clone of the currently selected part. Parts with more than one instance present are marked with an orange lower half. Anything done to one of them affects all clones.<br>
+<br>
+You can drag a selection box using the mouse to select multiple parts at once. Multiple parts can be moved and deleted together, but not yet copied. Maybe in a future update.<br>
+Double-click LMB on a part to bring up its window. Parts with open windows are highlighted in red.<br>
+Parts placed below the grid area won't be heard when playing the song. Use this area to store "scrap" parts that have no place in the song.<br>
+Click Ctrl+LMB on an empty part of the timeline to mute that track. Any parts placed on this track won't be triggered when playing the song. Use Shift+Ctrl+LMB to toggle "solo" mode, where all tracks but the clicked one are muted. This can also be used to quickly unmute all tracks (Shift+Ctrl and click LMB twice)<br>
+<br>
+Click RMB or LMB in the song info box to enter title, author and other relevant text about the current song.<br>
+<br>
+At the top, you have two knobs to control volume. Master volume is the "true" volume shown on the level indicators. Adjust this knob to avoid clipping of loud sounds. The other knob labeled "speaker" is just for controlling what you hear while working, adjust it freely to get a comfortable audio level. Blue/white bar indicates CPU load, you might experience crackling if it reaches near 100% (this is irrelevant for disk recording though, where output is always perfectly clean).<br>
+Tempo knob controls playback speed.<br>
+<br>
+Click LMB in the top red bar to set start position for song playback. RMB sets end position.<br>
+If song loop is enabled Shift+LMB sets loop start position (playback will jump here when the end position is reached).<br>
+You can also click and drag the position bars using LMB (still in the red area).<br>
+<br>
+<b>Main buttons:</b><br>
+<br>
+<b>"play" (F5)</b> - Play song from start position.<br>
+<b>"loop"</b> - Toggle song loop.<br>
+<b>"rec song"</b> - Automatically record the song from start and end, will activate "disk rec" as seen below. This button will disable looping by default, but you can manually activate loop after the recording has started if you really want to record several loops of the song. Leaving it alone should result in a one-loop WAV sample that is suitable for repeated play (if the song was built for it).
+<b>"disk rec"</b> - Toggle recording audio output to .WAV file of choice. Records all output, even if nothing is playing (keyjazz will be recorded). Output is "clean" regardless of what you hear in the speakers, it's independent of CPU load. (output file is an uncompressed 16 bit signed stereo sample at 44100 Hz).<br>
+<b>"record knobs" (F6)</b> - Starts playing the song while recording all movement of any knobs you have selected (click RMB on a knob and select "record" to prepare recording, selecting "default" makes the current knob position default - which is what will be used when there is no recorded value, "clear" erases all recordings for that knob)<br>
+<b>"save song" (Ctrl+S)</b> - Save everything to a *.smu-file. Ctrl+S saves without asking for a new filename.<br>
+<b>"load song" (Ctrl+L or Ctrl+O)</b> - Yep, restores everything from selected file (at least that's the idea).<br>
+<br>
+(bottom of window)<br>
+<b>"new song"</b> - Clear everything to start from scratch.<br>
+<b>"+4 bars"</b> - Insert empty space into the timeline at the current start position (by moving parts to the right). This is for restructuring the song without moving all parts around manually.<br>
+<b>"- 4 bars"</b> - Removes space in the song by moving parts to the left. This won't do anything if there's not enough room to move parts freely (it's non-destructive).<br>
+<b>"skin"</b> - Select a different graphical theme for the application. This is not fully implemented yet, so please don't spend any time working on custom skins yet.<br>
+<b>"hide"</b> - Hide the main song area to conserve cpu power, also useful if you want to listen to a song without being distracted by the visible song structure.<br>
+<br>
+<b>Preferences:</b> (bottom right of the window)<br>
+<br>
+<b>"metronome"</b> - Adjust metronome volume, bring it all the way to zero to disable count-in.<br>
+<b>"MIDI in"</b> - Click this button to select which MIDI device you want to use for input. Set "mididevice" to -1 in config.txt to disable MIDI input.<br>
+<b>"tooltips"</b> - Toggle showing tooltips for buttons and knobs.<br>
+<b>"octave up" (PageUp)</b> - Increase note bias for keyboard by one octave.<br>
+<b>"octave down" (PageDown)</b> - Make pancakes.<br>
+<b>"follow"</b> - Change scroll position to follow song while playing<br>
+<br>
+The application will remember these preferences along with window position/size until next time you start it.<br>
+<br>
+<br>
+
+
+<img src="divider.gif"><br><br>
+<font size=4>
+<a name="parts"></a>
+<b>Parts</b>
+<br>
+<br>
+</font>
+<img src="part.gif"><br>
+<br>
+When a part window is selected, pressing keyboard keys will trigger the associated instrument and show a visual indication of triggered notes.<br>
+Part windows can be moved by click-dragging LMB on their titlebars and resized by dragging the handle in the bottom-right. Double-click on title bar to hide window. When a new part is created it is assigned the currently selected instrument and a random name.<br>
+<br>
+Click-drag LMB in the main part area to place notes. Click again on a note to change its duration. RMB to delete notes (no need to click, just rub them out).<br>
+Hold Shift and drag with LMB to select multiple notes using a selection box, and move them by dragging LMB (without Shift) when there are selected notes. Ctrl+A or Shift+A selects all notes.<br>
+Press DEL to remove all selected notes.<br>
+Use Ctrl+C to copy selected notes, and paste them with Ctrl+V in any part window. Pasting only works when there is no selection. If two or more notes happen to end up on top of each other, a small red square will be displayed to alert you - move notes out of the way until the red square disappears.<br>
+Right click anywhere to deselect all (but be careful not to click on an actual note as it will be removed).<br>
+Hold Ctrl and drag with LMB to move a single note.<br>
+<br>
+To create slides, click MMB on an existing note and drag. The slide will begin at the end of the regular note.<br>
+To link several notes with sliding transitions, use "mono" mode in the associated instrument (if available). If you don't do this there might be some short overlap between notes which leads to popping noises.<br>
+<br>
+Polyphony depends on the instrument, but generally it's possible to have a large number of simultaneous notes, although it will increase CPU load. Putting an instrument in "mono" mode (where applicable) means that new triggers will interrupt playing ones, even if they overlap. Some instruments (currently xnes and chip) will play chords of overlapping notes as arpeggios when in mono mode, if the notes are triggered at the same point in time.<br>
+<br>
+The section seen below the main trigger area is for trigger volume/velocity. Modify these using LMB. Each newly created note is put at maximum intensity by default. It's possible to have several notes of different volume at the same point, but currently you can't edit them separately.<br>
+<br>
+Part window buttons:<br>
+<br>
+<b>"record"</b>     - Record input live from the keyboard. If the metronome is activated it will count in four ticks before the actual recording starts. Recorded notes will snap to the nearest "reasonable" position.<br>
+<b>"play"</b>       - Play this part from the beginning. Will loop if there's one set.<br>
+<b>"place loop"</b> - Click this then click LMB in the note area to place the loop point/end. Click RMB to remove loop.<br>
+<b>"load"</b>       - Load part contents from file (only notes, instrument is preserved)<br>
+<b>"save"</b>       - Save part contents to file (only notes)<br>
+<b>"clear"</b>      - Wipe all note triggers.<br>
+<b>"set instr."</b> - Re-binds this part to the currently selected instrument.<br>
+<br>
+Part-specific buttons below the song area:<br>
+<br>
+<b>"loop up"</b>    - Increase the number of loops for this part instance (if the part has a loop set).<br>
+<b>"loop down"</b>  - As above, but very different...<br>
+<br>
+<br>
+
+<img src="divider.gif"><br><br>
+<font size=4>
+<a name="instruments"></a>
+<b>Instruments</b>
+<br>
+<br>
+</font>
+<img src="instruments.gif"><br>
+<br>
+Click LMB on an instrument name to select it or RMB to bring up its context menu. Double-click LMB to open or hide its control window.<br>
+Each instrument has a multi-colored bar on the right side of its window title. This can be used to select a representative instrument color which creates better overview in the song.<br>
+<br>
+<b>Instrument operations (from context menu):</b><br>
+<br>
+<b>"rename"</b> - Change the instrument name.<br>
+<b>"use for current part"</b> - Select a part in the song area and then click this. The same thing can also be done using a button in the part window.<br>
+<b>"load/replace"</b> - Load an instrument into the selected slot in the instrument list.<br>
+<b>"save"</b> - Save selected instrument.<br>
+<b>"delete"</b> - Remove selected instrument. You need to make sure it's not in use by any parts by either removing those parts or re-assigning them to other instruments.<br>
+<br>
+<img src="divider2.gif"><br><br>
+<b>Effects:</b><br>
+<img src="gapan.gif"><br>
+<br>
+Technically, there are "effects" too (like in Buzz, yay), but for now there is only one and it gets attached to all instruments by default.<br>
+It's called "gapan" and was originally intended to allow gain and pan tuning, but I ended up adding some filtering, distortion and reverb support as well.<br>
+<br>
+From left to right, roughly:<br>
+<b>"gain"</b> - Final amplification applied after all other effects.<br>
+<b>"pan"</b> - Stereo placement of this instrument.<br>
+<br>
+<b>Filter:</b> (green LED indicates if the filter is active)<br>
+<b>"HP"</b> - High pass filter frequency (no resonance, applied before low pass filter)<br>
+<b>"LP"</b> - Low pass filter frequency<br>
+<b>"RS"</b> - Low pass filter resonance, high resonance can cause fairly wild variations in volume depending on whether the source sound is near the resonant frequency - you may need to turn down gain to avoid clipping.<br>
+<br>
+<b>Distortion:</b><br>
+<b>"dist"</b> - Click the left-most button to activate distortion. Type is determined using the other three buttons:<br>
+Top button is regular "clip" distortion.<br>
+Middle one is sine-shaped distortion, which feeds the waveform as the parameter to a sine function, in effect creating a form of FM modulation.<br>
+Bottom button is a sort of blend between the two, where it behaves like a linear version of the sine function until it's saturated, from where it'll start clipping.<br>
+<b>"amp"</b> - Pre-amp applied before distortion, use it to control the amount of dist.<br>
+<br>
+<b>Reverb:</b><br>
+<b>"str"</b> - Reverb strength/intensity, disable by turning it all the way down (LED goes out).<br>
+<b>"dpt"</b> - Reverb depth, the "size of the room" as it were. Larger values generally requires higher fidelity to sound good (see below).<br>
+<b>"qty"</b> - Reverb quality. This is needed because the effect tends to eat a bucket-load of CPU... I'll try optimizing this using feedback instead of the current approach, but for now you'll have to deal with it. If you're short on CPU you can keep the fidelity low while editing the song and then crank it up for disk rec (where CPU usage doesn't matter).<br>
+<br>
+<br>
+Here are descriptions for the current instruments. More are planned for future releases.<br>
+<br>
+
+<img src="divider2.gif"><br><br>
+<a name="xnes"></a>
+<b>xnes:</b><br>
+<img src="xnes.gif"><br>
+<br>
+This instrument is meant to simulate the audio capabilities of the NES and provide means
+to create a variety of more or less complex sounds that you could find coming from one of
+these machines. The NES has two variable-duty square channels, one triangle channel, one noise, and one 1-bit delta PCM. This last one isn't covered by xnes, but an approximation of it can be found in the "chip" instrument (see below).<br>
+xnes doesn't claim to be a perfect emulation, and in its default mode it doesn't even try very hard. There's a "realistic" mode though (button with green LED on the right), which limits the range of settings for square duty cycle and volume levels to mimic what's available on a real NES. Use this if you want to make authentic sounds.
+Square channels aren't biased to compensate for DC offset due to duty cycle variation,
+but neither is the original NES. Just remember that there will be "plopping" when triggering
+sounds with high/narrow duty cycle (and when releasing them).
+For complex sounds each channel has an arpeggiator and a volume envelope. The two square
+channels also have a duty cycle envelope.<br>
+<br>
+Knobs to the left are volume controls for the individual channels.<br>
+The button on the top far right brings up the <b>general options</b> page with various global settings:<br>
+<br>
+<img src="xnesoptions.gif"><br>
+<br>
+<b>"del"</b> - Slide delay, how long to wait before sliding and/or starting vibrato.<br>
+<b>"ss"</b> - Slide speed (and direction), 12 o'clock is no slide.<br>
+<b>"vd"</b> - Vibrato depth.<br>
+<b>"vs"</b> - Vibrato speed. Turn this down to zero and vibrato depth will control static detune amount. Useful for combining instruments.<br>
+<b>"arp speed"</b> - Arpeggio speed.<br>
+<b>"a.loop"</b> - Toggle arpeggio loop. If disabled the arpeggio will run through to the end position and stay there.<br>
+<b>"mono"</b>      - Toggle mono/polyphonic mode, mono is useful to prevent overlap - new triggers will override the old sound.<br>
+<b>"sld"</b>       - Note-to-note slide (only available in mono mode), time to spend sliding between two notes. Leftmost setting disables sliding.<br>
+<b>"attack"</b> - Attack speed of envelopes, speed used while note is triggered.<br>
+<b>"decay"</b> - Decay speed of envelopes, used after note has been released.<br>
+<br>
+The buttons to the left of the "display area" in the middle are for arpeggios and envelopes.<br>
+Each channel has its own set of buttons on the same vertical level as the volume knob and label.<br>
+<br>
+Rightmost button - <b>Arpeggio:</b><br>
+<br>
+<img src="xnesarpeggio.gif"><br>
+<br>
+This view is vertically scrollable, red squares indicate note offsets (default is zero).
+Octaves are highlighted, as well as every 3rd offset (the arpeggio shown in the image is 0,4,7). White line is the end position where it will loop (if a.loop is set in general options). Right click to remove an offset and make a "hole" there. This will mute the sound at that point. To move the loop point, hold Shift and click LMB. The arpeggio will play up to and including
+the note at the loop point.<br>
+If the xnes is put into mono mode and several notes are triggered simultaneously, they will be played in sequence (rising scale) as an arpeggio using the current arpeggio speed. This will override any arpeggio pattern drawn in the instrument window.<br>
+Chords using the two square channels can sound very nice and is used a lot in real NES music.
+One simple way of making chords without manually placing the notes in the part window is to
+leave the arpeggio for one square at the default setting and set the other one to a constant
+offset above or below zero. Using full octave offsets can give "organ"-type sounds (especially
+if the triangle is also used to get another octave in there).<br>
+<br>
+Middle/Left button - <b>Volume envelope:</b><br>
+<br>
+<img src="xnesenvelope.gif"><br>
+<br>
+Up is louder, down is quieter. LMB to draw volume curve, RMB and Shift+LMB to place loop end/start points.
+When a note is triggered the envelope will start "playing" from the far left and move right at
+the specified attack speed (see above) until it reaches the black end-of-loop point where it will
+jump back to the light grey start-of-loop point. When the note is released it will start moving
+at the decay speed until it reaches the right edge. At any point the volume of the channel is
+determined by the height of the curve at the current playing position (shown as a white line).
+Pressing the suspicious little button to the far right of the window below the options button
+causes the currently displayed envelope to be copied to all channels. This is useful when you
+need multichannel sounds to behave the same way across the board (like a coherent reverb/falloff).
+<br>
+NOTE: Something sometimes causes envelope loop positions to get messed up, so if a channel suddenly goes silent then this might be the reason. You need to restore its loop range. This needs fixing, obviously.<br>
+<br>
+Leftmost button (for square channels) - <b>Duty cycle envelope:</b><br>
+<br>
+<img src="xnesdutyenv.gif"><br>
+<br>
+Same deal as volume envelope, but controls duty cycle. Bottom values result in pure 50/50 square,
+higher is more "open"/narrow duty cycle, with the absolute top position causing silence or 0/100.
+Smooth duty cycle sweeps aren't really possible with the NES, so using them tends
+to make things sound more like C64/SID (that might not be a bad thing though).
+There's a duty cycle knob as well, which basically scales the entire envelope range...
+If the envelope is in its default mode of all zero then the knob works as expected and directly
+determines duty cycle.<br>
+<br>
+<br>
+<br>
+
+<img src="divider2.gif"><br><br>
+<a name="chip"></a>
+<b>chip:</b><br>
+<img src="chip.gif"><br>
+<br>
+This instrument is built upon XNES and most of it works the same way. It is cut down to one channel though and has the added functionality of a user-determined waveform.<br>
+(see above for the XNES-like functions)<br>
+<br>
+Leftmost button - <b>Waveform editor (default mode):</b><br>
+<br>
+Draw with left mouse button. Uh, that's it. What you draw is what you hear :)<br>
+<br>
+There's a knob for wave offset, which determines which part of the waveform is played. The active area
+is red in the waveform editor.
+What is the duty cycle envelope in XNES is offset envelope here. Envelope output controls offset. Simple stuff.<br>
+<br>
+<b>"DPCM"</b> - Activates a 1-bit delta-PCM mode that attempts to mimic the NES. It's probably not very authentic as I have no real experience with using the real thing, but I think the basic specs are right - and it does seem to sound pretty much like the real thing (depends a lot on what waveform you draw).<br>
+<b>"FLT"</b> - Enables a preset slightly resonant lowpass filter that helps cut off harsh frequencies and makes for much cleaner sounds, crucial for bass instruments.<br>
+<br>
+<br>
+<br>
+
+<img src="divider2.gif"><br><br>
+<a name="swave"></a>
+<b>swave:</b><br>
+<img src="swave.gif"><br>
+<br>
+Load .WAV files. Make beats. Be happy. Do feed the animals.<br>
+<br>
+There are 12 sample slots, one for each note in an octave. The green light indicates if a sample is
+loaded in that slot. Red light shows if a sample is playing.<br>
+Top knob controls volume. Bottom knob is pitch (this is particularly useful when loading drum loops or similar, where you want to fine-tune the duration of the sample - remember Shift-knobbing!).<br>
+Press a button to load a .WAV file into the corresponding slot. If you press cancel or select an
+invalid file the slot will be cleared.<br>
+<br>
+Samples are played by triggering notes as usual. Each octave is mapped to the same range of samples,
+so C-4 is the same as C-5 etc. This can be used to spread out the instruments on the keyboard for
+better access when doing live recordings.<br>
+<br>
+Loaded samples will be in mono, normalized and stripped of leading and trailing silence. This means that you
+can generate drum/effect samples almost on-the-fly in musagi by starting disk rec, triggering a sound
+using some instrument, stopping disk rec, then loading the produced .WAV file into SWAVE directly.<br>
+When saving a SWAVE instrument all the samples are saved with it, so there's no need to keep track of the .WAV files you used when you built
+the SWAVE sound bank.<br>
+<br>
+<br>
+<br>
+
+<img src="divider2.gif"><br><br>
+<a name="vsmp"></a>
+<b>vsmp:</b><br>
+<img src="vsmp.gif"><br>
+<br>
+Old-school tracker-type action. WAVs as instruments.<br>
+<br>
+Click the "load wav" button to load a sample.<br>
+The note number indicates what note the sample was recorded at. This needs to be calibrated properly if you want the sound to play in harmony with other instruments.<br>
+<br>
+Same thing goes for volume normalization here, the code is the same as for SWAVE.<br>
+<br>
+<br>
+<br>
+
+<img src="divider2.gif"><br><br>
+<a name="protobass"></a>
+<b>protobass:</b><br>
+<img src="protobass.gif"><br>
+<br>
+TB-303 wannabe. Modeled from visual inspection of RB-338 output. Relatively heavy on cpu usage compared to the other instruments.
+Basic structure is a sawtooth-ish waveform run through a lowpass filter with variable resonance,
+and an envelope that controls the cutoff. The envelope works from the set cutoff level and up,
+so you never get a cutoff frequency lower than the one set by the cutoff knob.
+The interface on this one consists of knobs to control various sound parameters.<br>
+<br>
+<b>"cutoff"</b> -  Base frequency of lowpass filter.<br>
+<b>"reso"</b>   - Resonance strength, applied at the cutoff frequency.<br>
+<b>"env.mod"</b> - Envelope modulation, scale of cutoff envelope.<br>
+<b>"decay"</b>  - Decay speed of the envelope.<br>
+<b>"env.shp"</b> - Envelope linearity, left is sort of exponential falloff, up is linear, right is "delayed".<br>
+<br>
+The knobs you'll most likely want to play with are env.mod and cutoff.<br>
+<br>
+<br>
+<br>
+
+<img src="divider2.gif"><br><br>
+<a name="midinst"></a>
+<b>midinst:</b><br>
+<img src="midinst.gif"><br>
+<br>
+MIDI instrument. Select an instrument to use and it will be played through your default midi-out device. Adding one of these to the song will disable normal wave output and only allow midi instruments to be heard (this is due to the midi system using a different timing mechanism and it's currently not possible to sync it with the regular audio).<br>
+Disk rec doesn't work with midi instruments since musagi doesn't have access to their output waveforms. It's still possible to record a midi song using a third-party sound recording application though, and future musagi versions will probably include that functionality built-in.<br>
+At the moment there's a pretty restrictive limitation on the number of midi instruments allowed - no more than 15 in one song. I'll later change this to no more than 15 playing simultaneously (which would make it more or less unlimited).<br>
+Removing all midi instruments will resume the default wave output mode.<br>
+<br>
+Slides don't work with midi instruments.<br>
+<br>
+<b>"volume"</b> -  Volume/velocity.<br>
+<b>"instrument"</b>   - MIDI program number (standard instrument name shown).<br>
+<b>"octave"</b> - Base octave offset, used to bring oddly pitched instruments within a comfortable range.<br>
+<br>
+<br>
+<br>
+
+<img src="divider2.gif"><br><br>
+<a name="midperc"></a>
+<b>midperc:</b><br>
+<img src="midperc.gif"><br>
+<br>
+MIDI percussion instrument. Works in the same manner as swave, but uses the default midi-out device to play percussion sounds. The sound mapping repeats inside every 12-note octave. Comes pre-configured with a simple drum kit.<br>
+<br>
+<b>top row of knobs</b> -  Volume/velocity of each sound.<br>
+<b>bottom row of knobs</b>   - MIDI percussion program number.<br>
+<br>
+<br>
+<br>
+
+<img src="divider2.gif"><br><br>
+<a name="vsti"></a>
+<b>VSTi:</b><br>
+<img src="vsti.gif"><br>
+<br>
+Used for interfacing with VST instruments.<br>
+<br>
+<b>plugin</b> - Click button to select a VSTi DLL to use.<br>
+<b>interface</b> - This button toggles the native VSTi interface window.<br>
+<b>pitch/mod</b> - Emulates MIDI pitch/mod wheels.<br>
+<b>vel</b> - Overall note velocity.<br>
+<b>oct</b> - Octave offset.<br>
+<b>program</b> - Selects a sound program/patch from the VSTi.<br>
+<b>preamp</b> - Internal amplification between VSTi-generated sound and musagi effects.<br>
+<br>
+<br>
+<br>
+
+<img src="divider2.gif"><br><br>
+<a name="operator"></a>
+<b>operator:</b><br>
+<img src="operator.gif"><br>
+<br>
+This is a special kind of instrument which can't produce any sound of its own. Instead, you connect two other instruments to it and the operator will combine their outputs in various ways. There are two main modes of operation:<br>
+<br>
+<b>ringmod:</b><br>
+Ring modulation, or simply multiplication of the two waveforms. This tends to produce non-musical metallic resonant sounds.<br>
+From wikipedia: "On the C64 SID chip, ring modulation multiplies a triangle wave with a square wave." - and it can indeed sound like a SID in some circumstances. I also believe it's been used for creating percussive sounds in various 80's synthesizers.<br>
+You can adjust the strength of this effect using the left-most knob. This will essentially crossfade between a regular mix of the inputs and the multiplied ring modulation. Even a pure mix is useful though, as you can link the two connected instruments together. This will make them play the same notes, simultaneously. Coupled with vibrato or frequency offset (using arpeggiator or detune) this can create very interesting effects.<br>
+<br>
+<b>vocoder:</b><br>
+Hooray! Plug a voice sample into channel A and some synth into B, then let them both rip to produce lovely robotic voices and what not.<br>
+The principle behind this classic type of vocoder is that a bank of bandpass filters (through FFT processing) will analyze the voice sound and apply a similarly shaped filter to the synth, which will make it appear to mimic the character of the voice.<br>
+Notice that you will indeed have to produce sound at both inputs to hear anything, but it's not recommended to actually link the instruments in this mode. The reason for this is simply that you'd typically use swave for the voice sample, and it doesn't react to note triggers in the same way as synths. Normal operation would be to trigger a voice sample, then trigger one or several notes on the synth. With linked instruments, you also couldn't trigger several synth notes in sequence while playing the same voice sample (robotic singing, anyone?).<br>
+For convenient testing, you can create a looping part that repeats the voice sample over and over while you improvise on the other instrument to try out different configurations. Low frequencies of high-duty square tends to work nicely for the classic robot effect.<br>
+<br>
+To adjust various aspects of the sound, use gain controls on the different participating instruments. You can see the voice input levels in the right-most indicator in the operator window. Adjust voice gain to keep this reasonable (not clipping too much while still reasonably strong). Treble is passed more or less untouched from the voice to make consonant sounds easier to make out. If you increase gain in the synth instrument (input B), you will get more voice/body compared to the treble/consonants. Regulate final output volume using gain on the operator.<br>
+In vocoder mode, strength blends between original voice and vocoded result.<br>
+<br>
+<b>Note that I might modify and tweak this instrument without prior notice, so keep a backup of the musagi version you originally used when creating vocoder songs if you are worried about perfect sound reproduction.</b><br>
+<br>
+<br>
+<br>
+
+<img src="divider2.gif"><br><br>
+<a name="wavein"></a>
+<b>wavein:</b><br>
+<img src="wavein.gif"><br>
+<br>
+Outputs sound from the current wave recording source. You can change this using your soundcard properties or Windows volume control. Typically you'd want to use a microphone. Unfortunately there is a bit too much audio delay for this to be comfortable at the moment, but that should be resolved in a future update when I've implemented ASIO support. The main motivation for adding this was to get live vocoder effects :P<br>
+<br>
+<b>Gain</b> - Amplification level.<br>
+<b>Dynamic</b> - Toggles dynamic/automatic amplification.<br>
+<br>
+<br>
+<br>
+
+</td>
+</tr>
+</table>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2009 Teleca Poland Sp. z o.o. <android@teleca.com>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+ 
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. 
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/VersionText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:text="ver 0.0.0, Teleca Poland"
+        android:textSize="11dip" >
+    </TextView>
+
+    <ca.jvsh.translator.FixedViewFlipper
+        android:id="@+id/CompanyViewFlipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:inAnimation="@anim/fade_in"
+        android:outAnimation="@anim/fade_out"
+        android:paddingLeft="10dip" >
+
+        <!-- Jamendo Part -->
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dip"
+                    android:src="@drawable/logo" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dip"
+                    android:text="@string/terms_of_use"
+                    android:textSize="12dip" >
+                </TextView>
+
+                <Button
+                    android:id="@+id/TermsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/terms_button" >
+                </Button>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Teleca Part -->
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dip"
+                    android:src="@drawable/teleca_logo" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/maintainers"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/AuthorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Piotr Borowczyński\nBartosz Cichosz\nMarcin Gil\nArkadiusz Grabka\nArtur Kulik"
+                    android:textSize="12dip" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/credits"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/AuthorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Łukasz Wiśniewski (design &amp; orig. development)\nMieszko Lassota (ui audit)\nŁukasz Wojciechowski (testing)\nMarcin Bugaj (testing)"
+                    android:textSize="12dip" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/contributors"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/AuthorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Patrik Selin (Finnish)\nMatthieu Berthomé (French)\nAnonymous translators (Turkish)\n"
+                    android:textSize="12dip" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/about_contact"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/LinkText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:text="@string/about_link"
+                    android:textSize="18dip" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:text="@string/about_address"
+                    android:textSize="14dip" >
+                </TextView>
+            </LinearLayout>
+        </ScrollView>
+    </ca.jvsh.translator.FixedViewFlipper>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/android:bottom_bar"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="3dip" >
+
+        <Button
+            android:id="@+id/AboutCompanyButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="0.5"
+            android:text="@string/about_teleca" >
+        </Button>
+
+        <Button
+            android:id="@+id/CancelButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_weight="0.5"
+            android:text="@string/ok" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

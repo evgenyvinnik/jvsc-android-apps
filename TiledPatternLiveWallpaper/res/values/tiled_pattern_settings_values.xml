@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+	<!-- Select pattern multiple preferences list -->
+
+	<string-array name="selected_patterns_entries">
+		<item>"All"</item>
+		<item>"Aloha Turkey"</item>
+		<item>"Haunted 2 Regal"</item>
+		<item>"Hollyhock"</item>
+		<item>"Kiwi"</item>
+		<item>"Simple Paisley"</item>
+		<item>"Twirll 2"</item>
+	</string-array>
+
+	<string-array name="selected_patterns_entry_values">
+		<item>"all"</item>
+		<item>"aloha_turkey"</item>
+		<item>"haunted_2_regal"</item>
+		<item>"hollyhock"</item>
+		<item>"kiwi"</item>
+		<item>"simple_paisley"</item>
+		<item>"twirll_2"</item>
+	</string-array>
+
+	<!-- Movement speed -->
+	<string-array name="movement_speed_entries">
+		<item>"Still"</item>
+		<item>"Slow"</item>
+		<item>"Fast"</item>
+	</string-array>
+
+	<string-array name="movement_speed_entry_values">
+		<item>"still"</item>
+		<item>"slow"</item>
+		<item>"fast"</item>
+	</string-array>
+
+	<!-- Movement direction -->
+	<string-array name="movement_direction_entries">
+		<item>"random"</item>
+		<item>"North"</item>
+		<item>"Northwest"</item>
+		<item>"West"</item>
+		<item>"Southwest"</item>
+		<item>"South"</item>
+		<item>"SouthEast"</item>
+		<item>"East"</item>
+		<item>"Northeast"</item>
+	</string-array>
+
+	<string-array name="movement_direction_entry_values">
+		<item>"random"</item>
+		<item>"north"</item>
+		<item>"northwest"</item>
+		<item>"west"</item>
+		<item>"southwest"</item>
+		<item>"south"</item>
+		<item>"southeast"</item>
+		<item>"east"</item>
+		<item>"northeast"</item>
+	</string-array>
+
+	<!-- Pattern change frequency -->
+	<string-array name="change_frequency_entries">
+		<item>"Never"</item>
+		<item>"Rare"</item>
+		<item>"Often"</item>
+	</string-array>
+
+	<string-array name="change_frequency_entry_values">
+		<item>"never"</item>
+		<item>"rare"</item>
+		<item>"often"</item>
+	</string-array>
+
+	<!-- Change order-->
+	<string-array name="change_order_entries">
+		<item>"Random"</item>
+		<item>"One by one"</item>
+	</string-array>
+
+	<string-array name="change_order_entry_values">
+		<item>"random"</item>
+		<item>"one_by_one"</item>
+	</string-array>
+</resources>

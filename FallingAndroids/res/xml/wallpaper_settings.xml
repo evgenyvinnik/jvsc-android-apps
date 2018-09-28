@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+		xmlns:android="http://schemas.android.com/apk/res/android"
+        android:title="@string/wallpaper_settings"
+        android:key="wallpaper_settings">
+        
+    <ca.jvsh.fallingdroids.ColorDialogPreference
+                android:title="@string/bgColor"
+                android:summary="@string/bgColor_summary"
+                android:key="colorPicker"/>
+</PreferenceScreen>

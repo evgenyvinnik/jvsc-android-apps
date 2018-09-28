@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- This resource is true if running under at least Honeycomb's
+         API level.  The default value is false; an alternative value
+         for Honeycomb is true. -->
+    <!--<bool name="atLeastHoneycombMR2">true</bool>-->
+</resources>

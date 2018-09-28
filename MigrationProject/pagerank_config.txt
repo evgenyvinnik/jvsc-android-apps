@@ -1,0 +1,15 @@
+reduces 48
+chunk_size 256
+input_chunks 100
+dfs_replicas 2
+map_slots 10
+reduce_slots 8
+worker_hosts_number 2
+vm_per_host	2
+cpu_flops_map 2802717504000
+ram_operations_map 458993459200
+disk_operations_map 12604967296
+map_output_bytes 3554432
+cpu_flops_reduce 10013932800000
+ram_operations_reduce 458993459200
+disk_operations_reduce 12600967296
